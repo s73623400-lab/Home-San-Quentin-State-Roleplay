@@ -1,57 +1,585 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>San Quentin State Roleplay</title>
-<style>
-*{box-sizing:border-box;margin:0;padding:0}
-body{font-family:Arial,Helvetica,sans-serif;background:#0b0d10;color:#fff}
-header{min-height:72vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:40px 20px;background:linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.8)),url('logo.png') center/cover no-repeat}
-.hero{max-width:900px}.badge{font-size:14px;letter-spacing:4px;text-transform:uppercase;color:#c8c8c8;margin-bottom:15px}
-h1{font-size:clamp(38px,7vw,78px);line-height:1;margin-bottom:18px;text-transform:uppercase}
-.hero p{font-size:20px;color:#ddd;margin-bottom:30px}
-.btn{display:inline-block;background:#fff;color:#111;text-decoration:none;padding:14px 24px;border-radius:7px;font-weight:700;margin:5px}
-.btn.dark{background:#222;color:#fff;border:1px solid #555}
-section{max-width:1100px;margin:auto;padding:70px 20px}
-h2{text-align:center;font-size:34px;margin-bottom:35px}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
-.card{background:#15181d;border:1px solid #292d34;border-radius:12px;padding:25px}
-.card h3{margin-bottom:10px}.card p{color:#bbb;line-height:1.6}
-footer{text-align:center;padding:35px 20px;border-top:1px solid #25282e;color:#888}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="San Quentin State Roleplay - Professional prison roleplay community.">
+  <title>San Quentin State Roleplay</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #090b0f;
+      color: #f4f4f4;
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(1120px, 92%);
+      margin: auto;
+    }
+
+    /* NAVIGATION */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(9, 11, 15, 0.94);
+      border-bottom: 1px solid #252a31;
+      backdrop-filter: blur(10px);
+    }
+
+    .nav-inner {
+      min-height: 70px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .logo {
+      font-size: 20px;
+      font-weight: 800;
+      letter-spacing: 0.5px;
+    }
+
+    .logo span {
+      color: #b9bec6;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 22px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    .nav-links a {
+      color: #c7cbd1;
+      font-size: 14px;
+      font-weight: 700;
+      transition: 0.2s;
+    }
+
+    .nav-links a:hover {
+      color: #ffffff;
+    }
+
+    /* HERO */
+    .hero {
+      min-height: 560px;
+      display: flex;
+      align-items: center;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      background:
+        radial-gradient(circle at 50% 20%, rgba(255,255,255,0.08), transparent 35%),
+        linear-gradient(180deg, #161a20 0%, #090b0f 100%);
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: repeating-linear-gradient(
+        90deg,
+        transparent 0,
+        transparent 78px,
+        rgba(255,255,255,0.018) 79px,
+        transparent 80px
+      );
+      pointer-events: none;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      width: 100%;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 7px 13px;
+      border: 1px solid #3a4048;
+      border-radius: 999px;
+      color: #cdd1d7;
+      background: rgba(255,255,255,0.04);
+      font-size: 12px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      margin-bottom: 18px;
+    }
+
+    .hero h1 {
+      font-size: clamp(42px, 7vw, 78px);
+      line-height: 1;
+      letter-spacing: -2px;
+      margin-bottom: 18px;
+    }
+
+    .hero p {
+      max-width: 700px;
+      margin: auto;
+      color: #b7bcc4;
+      font-size: 18px;
+    }
+
+    .hero-buttons {
+      margin-top: 30px;
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 20px;
+      border-radius: 8px;
+      border: 1px solid #3b414a;
+      background: #171b21;
+      color: white;
+      font-weight: 800;
+      font-size: 14px;
+      transition: 0.2s;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      background: #22272e;
+    }
+
+    .btn.primary {
+      background: #f1f1f1;
+      color: #090b0f;
+      border-color: #f1f1f1;
+    }
+
+    .btn.primary:hover {
+      background: #ffffff;
+    }
+
+    /* SECTIONS */
+    section {
+      padding: 78px 0;
+      border-bottom: 1px solid #1c2026;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 42px;
+    }
+
+    .section-title h2 {
+      font-size: 34px;
+      margin-bottom: 8px;
+    }
+
+    .section-title p {
+      color: #9298a1;
+    }
+
+    /* SESSION */
+    .session-card {
+      background: linear-gradient(145deg, #15191f, #0e1115);
+      border: 1px solid #2a3038;
+      border-radius: 16px;
+      padding: 28px;
+      display: grid;
+      grid-template-columns: 1.3fr 1fr;
+      gap: 30px;
+      box-shadow: 0 15px 45px rgba(0,0,0,0.25);
+    }
+
+    .session-main h3 {
+      font-size: 26px;
+      margin-bottom: 10px;
+    }
+
+    .session-main p {
+      color: #aeb4bd;
+      margin-bottom: 20px;
+    }
+
+    .status {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      padding: 8px 12px;
+      border-radius: 8px;
+      background: rgba(60, 190, 105, 0.1);
+      border: 1px solid rgba(60, 190, 105, 0.35);
+      color: #8ee5aa;
+      font-weight: 800;
+      font-size: 13px;
+    }
+
+    .status-dot {
+      width: 9px;
+      height: 9px;
+      background: #63d986;
+      border-radius: 50%;
+      box-shadow: 0 0 10px rgba(99,217,134,0.7);
+    }
+
+    .session-info {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+
+    .info-box {
+      background: #0b0e12;
+      border: 1px solid #272c34;
+      border-radius: 10px;
+      padding: 16px;
+    }
+
+    .info-box small {
+      display: block;
+      color: #7f8792;
+      margin-bottom: 4px;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+    }
+
+    .info-box strong {
+      font-size: 15px;
+    }
+
+    /* CARDS */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+    }
+
+    .card {
+      background: #111419;
+      border: 1px solid #262b32;
+      border-radius: 13px;
+      padding: 23px;
+      transition: 0.2s;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      border-color: #454c56;
+    }
+
+    .card-icon {
+      font-size: 27px;
+      margin-bottom: 12px;
+    }
+
+    .card h3 {
+      font-size: 18px;
+      margin-bottom: 7px;
+    }
+
+    .card p {
+      color: #969da7;
+      font-size: 14px;
+    }
+
+    /* COMMUNITY */
+    .community-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+
+    .community-card {
+      background: #111419;
+      border: 1px solid #262b32;
+      border-radius: 13px;
+      padding: 25px;
+    }
+
+    .community-card h3 {
+      margin-bottom: 8px;
+    }
+
+    .community-card p {
+      color: #969da7;
+      font-size: 14px;
+    }
+
+    /* FOOTER */
+    footer {
+      padding: 30px 0;
+      text-align: center;
+      color: #737a84;
+      font-size: 13px;
+    }
+
+    /* MOBILE */
+    @media (max-width: 850px) {
+      .grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .session-card {
+        grid-template-columns: 1fr;
+      }
+
+      .community-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .nav-inner {
+        padding: 12px 0;
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .nav-links {
+        gap: 13px;
+      }
+
+      .hero {
+        min-height: 500px;
+      }
+
+      .hero p {
+        font-size: 16px;
+      }
+
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
+      .session-info {
+        grid-template-columns: 1fr;
+      }
+
+      section {
+        padding: 58px 0;
+      }
+    }
+  </style>
 </head>
+
 <body>
-<header>
-<div class="hero">
-<div class="badge">Official Roleplay Community</div>
-<h1>San Quentin State Roleplay</h1>
-<p>Enter the yard. Build your story. Create realistic and immersive roleplay.</p>
-<a class="btn" href="#departments">Explore Server</a>
-<a class="btn dark" href="https://discord.gg/TUz5JxPPF" target="_blank" rel="noopener">Join Discord</a>
-</div>
-</header>
-<section>
-<h2>Welcome</h2>
-<div class="card"><p>Welcome to San Quentin State Roleplay. Our community focuses on organised, immersive roleplay with dedicated departments, staff, training and events. Join the community and start your roleplay journey.</p></div>
-</section>
-<section id="departments">
-<h2>Departments</h2>
-<div class="grid">
-<div class="card"><h3>👮 Corrections</h3><p>Maintain security, manage the facility and participate in prison roleplay.</p></div>
-<div class="card"><h3>🚔 Law Enforcement</h3><p>Respond to incidents and support the wider roleplay environment.</p></div>
-<div class="card"><h3>🚑 Medical</h3><p>Provide emergency response and medical roleplay throughout the server.</p></div>
-<div class="card"><h3>🛡️ Staff Team</h3><p>Keep the community organised, fair and enjoyable for everyone.</p></div>
-</div>
-</section>
-<section>
-<h2>Community</h2>
-<div class="grid">
-<div class="card"><h3>📜 Rules</h3><p>Read the server rules before participating in roleplay.</p></div>
-<div class="card"><h3>📋 Applications</h3><p>Apply for departments and staff positions through our Discord.</p></div>
-<div class="card"><h3>🎟️ Support</h3><p>Need help? Open a support ticket in the Discord server.</p></div>
-</div>
-</section>
-<footer>© 2026 San Quentin State Roleplay • Community Roleplay Project</footer>
+
+  <nav>
+    <div class="container nav-inner">
+      <a href="#home" class="logo">San Quentin <span>State Roleplay</span></a>
+
+      <div class="nav-links">
+        <a href="#home">Home</a>
+        <a href="#sessions">Sessions</a>
+        <a href="#departments">Departments</a>
+        <a href="#rules">Rules</a>
+        <a href="#applications">Applications</a>
+        <a href="#support">Support</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero" id="home">
+    <div class="container hero-content">
+      <div class="badge">Official Roleplay Community</div>
+
+      <h1>San Quentin<br>State Roleplay</h1>
+
+      <p>
+        Enter the yard. Build your story. Create realistic, organised
+        and immersive prison roleplay.
+      </p>
+
+      <div class="hero-buttons">
+        <a class="btn primary" href="#sessions">View Daily Sessions</a>
+        <a class="btn" href="#departments">Explore Departments</a>
+      </div>
+    </div>
+  </header>
+
+  <section id="sessions">
+    <div class="container">
+      <div class="section-title">
+        <h2>📅 Daily Sessions</h2>
+        <p>Stay up to date with the latest San Quentin State Roleplay sessions.</p>
+      </div>
+
+      <div class="session-card">
+        <div class="session-main">
+          <div class="status">
+            <span class="status-dot"></span>
+            Sessions Available
+          </div>
+
+          <h3 style="margin-top: 18px;">Daily Prison Roleplay</h3>
+
+          <p>
+            Join organised sessions throughout the day and take part in
+            realistic prison roleplay, department activities and community events.
+          </p>
+
+          <a class="btn primary" href="#departments">View Departments</a>
+        </div>
+
+        <div class="session-info">
+          <div class="info-box">
+            <small>Session Type</small>
+            <strong>Prison RP</strong>
+          </div>
+
+          <div class="info-box">
+            <small>Sessions</small>
+            <strong>Daily</strong>
+          </div>
+
+          <div class="info-box">
+            <small>Community</small>
+            <strong>San Quentin RP</strong>
+          </div>
+
+          <div class="info-box">
+            <small>Status</small>
+            <strong>Active</strong>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="departments">
+    <div class="container">
+      <div class="section-title">
+        <h2>Departments</h2>
+        <p>Choose your role and help build the San Quentin experience.</p>
+      </div>
+
+      <div class="grid">
+        <div class="card">
+          <div class="card-icon">👮</div>
+          <h3>Corrections</h3>
+          <p>Maintain security, manage the facility and participate in prison roleplay.</p>
+        </div>
+
+        <div class="card">
+          <div class="card-icon">🚔</div>
+          <h3>Law Enforcement</h3>
+          <p>Respond to incidents and support the wider roleplay environment.</p>
+        </div>
+
+        <div class="card">
+          <div class="card-icon">🚑</div>
+          <h3>Medical</h3>
+          <p>Provide emergency response and medical roleplay throughout the server.</p>
+        </div>
+
+        <div class="card">
+          <div class="card-icon">🛡️</div>
+          <h3>Staff Team</h3>
+          <p>Keep the community organised, fair and enjoyable for everyone.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="rules">
+    <div class="container">
+      <div class="section-title">
+        <h2>📜 Rules</h2>
+        <p>Our rules help keep roleplay fair, organised and enjoyable.</p>
+      </div>
+
+      <div class="community-grid">
+        <div class="community-card">
+          <h3>Respect Everyone</h3>
+          <p>Treat players and staff respectfully. Harassment and unnecessary arguments are not welcome.</p>
+        </div>
+
+        <div class="community-card">
+          <h3>Stay In Character</h3>
+          <p>Keep roleplay immersive and follow the scenario instead of intentionally disrupting it.</p>
+        </div>
+
+        <div class="community-card">
+          <h3>Follow Staff</h3>
+          <p>Listen to reasonable staff instructions during sessions and events.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="applications">
+    <div class="container">
+      <div class="section-title">
+        <h2>📋 Applications</h2>
+        <p>Interested in joining a department or helping the community?</p>
+      </div>
+
+      <div class="community-grid">
+        <div class="community-card">
+          <h3>Department Applications</h3>
+          <p>Apply to become part of one of our roleplay departments.</p>
+        </div>
+
+        <div class="community-card">
+          <h3>Staff Applications</h3>
+          <p>Help manage sessions, support players and improve the community.</p>
+        </div>
+
+        <div class="community-card">
+          <h3>Training</h3>
+          <p>Complete the required training before taking on certain responsibilities.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="support">
+    <div class="container">
+      <div class="section-title">
+        <h2>🎟️ Support</h2>
+        <p>Need help? Our community team is here to assist.</p>
+      </div>
+
+      <div class="community-grid">
+        <div class="community-card">
+          <h3>Community Support</h3>
+          <p>Speak with a member of the staff team if you need assistance with the server.</p>
+        </div>
+
+        <div class="community-card">
+          <h3>Report an Issue</h3>
+          <p>Report problems or rule-breaking to the appropriate staff member.</p>
+        </div>
+
+        <div class="community-card">
+          <h3>Questions</h3>
+          <p>Ask staff if you are unsure about departments, sessions or roleplay procedures.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    © 2026 San Quentin State Roleplay • Community Roleplay Project
+  </footer>
+
 </body>
 </html>
