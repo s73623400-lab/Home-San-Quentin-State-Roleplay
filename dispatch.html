@@ -15,20 +15,8 @@ body{
   line-height:1.6
 }
 
-button,input,textarea,select{
-  font:inherit
-}
-
-button{
-  cursor:pointer
-}
-
-.container{
-  width:min(1200px,94%);
-  margin:auto
-}
-
-/* LOGIN */
+button,input,textarea,select{font:inherit}
+button{cursor:pointer}
 
 .login-page{
   min-height:100vh;
@@ -67,9 +55,7 @@ button{
   margin:5px 0 25px
 }
 
-.field{
-  margin-bottom:15px
-}
+.field{margin-bottom:15px}
 
 .field label{
   display:block;
@@ -131,7 +117,7 @@ button{
   text-align:center
 }
 
-/* DISPATCH APP */
+/* DISPATCH */
 
 .dispatch-app{
   min-height:100vh;
@@ -158,9 +144,7 @@ button{
   gap:12px
 }
 
-.title h1{
-  font-size:22px
-}
+.title h1{font-size:22px}
 
 .live{
   display:inline-flex;
@@ -202,8 +186,6 @@ button{
   padding:8px 12px;
   font-weight:700
 }
-
-/* LAYOUT */
 
 .layout{
   display:grid;
@@ -250,15 +232,8 @@ button{
   overflow:auto
 }
 
-.panel{
-  display:none
-}
-
-.panel.active{
-  display:block
-}
-
-/* STATS */
+.panel{display:none}
+.panel.active{display:block}
 
 .stats{
   display:grid;
@@ -282,11 +257,7 @@ button{
   margin-bottom:4px
 }
 
-.stat strong{
-  font-size:25px
-}
-
-/* CARDS */
+.stat strong{font-size:25px}
 
 .card{
   background:#0d1014;
@@ -338,9 +309,7 @@ button{
   box-shadow:0 0 8px rgba(99,217,134,.6)
 }
 
-.officer-name{
-  font-weight:800
-}
+.officer-name{font-weight:800}
 
 .officer-rank{
   color:#747c87;
@@ -361,9 +330,7 @@ button{
   gap:13px
 }
 
-.full{
-  grid-column:1/-1
-}
+.full{grid-column:1/-1}
 
 .incident-list{
   display:grid;
@@ -384,9 +351,7 @@ button{
   margin-bottom:7px
 }
 
-.incident-type{
-  font-weight:800
-}
+.incident-type{font-weight:800}
 
 .incident-time{
   color:#747c87;
@@ -428,9 +393,7 @@ button{
   margin-bottom:10px
 }
 
-.message{
-  margin-bottom:13px
-}
+.message{margin-bottom:13px}
 
 .message-author{
   font-size:12px;
@@ -462,8 +425,6 @@ button{
   padding:11px
 }
 
-/* MOBILE */
-
 @media(max-width:800px){
 
   .layout{
@@ -486,9 +447,7 @@ button{
 
 @media(max-width:600px){
 
-  .main{
-    padding:15px
-  }
+  .main{padding:15px}
 
   .incident-form{
     grid-template-columns:1fr
@@ -507,7 +466,6 @@ button{
 
 <body>
 
-
 <!-- LOGIN -->
 
 <div id="loginPage" class="login-page">
@@ -524,9 +482,7 @@ button{
 
 <div class="field">
 
-<label for="officerName">
-Name
-</label>
+<label for="officerName">Name</label>
 
 <input
 id="officerName"
@@ -540,9 +496,7 @@ maxlength="50"
 
 <div class="field">
 
-<label for="officerRank">
-Rank
-</label>
+<label for="officerRank">Rank</label>
 
 <input
 id="officerRank"
@@ -599,9 +553,6 @@ Go Off Duty
 
 <div class="layout">
 
-
-<!-- SIDEBAR -->
-
 <aside class="sidebar">
 
 <div class="sidebar-title">
@@ -639,49 +590,34 @@ data-panel="chat"
 </aside>
 
 
-<!-- MAIN -->
-
 <main class="main">
 
 
 <!-- DASHBOARD -->
 
-<section
-id="panel-dashboard"
-class="panel active"
->
+<section id="panel-dashboard" class="panel active">
 
 <div class="stats">
 
 <div class="stat">
 
-<small>
-Officers On Shift
-</small>
+<small>Officers On Shift</small>
 
-<strong id="officerCount">
-0
-</strong>
+<strong id="officerCount">0</strong>
 
 </div>
 
 <div class="stat">
 
-<small>
-Total Incidents
-</small>
+<small>Total Incidents</small>
 
-<strong id="incidentCount">
-0
-</strong>
+<strong id="incidentCount">0</strong>
 
 </div>
 
 <div class="stat">
 
-<small>
-System
-</small>
+<small>System</small>
 
 <strong style="font-size:18px">
 ONLINE
@@ -694,30 +630,18 @@ ONLINE
 
 <div class="card">
 
-<h2>
-👮 Officers Currently On Shift
-</h2>
+<h2>👮 Officers Currently On Shift</h2>
 
-<div
-id="dashboardOfficers"
-class="officer-list"
->
-</div>
+<div id="dashboardOfficers" class="officer-list"></div>
 
 </div>
 
 
 <div class="card">
 
-<h2>
-🚨 Latest Incidents
-</h2>
+<h2>🚨 Latest Incidents</h2>
 
-<div
-id="dashboardIncidents"
-class="incident-list"
->
-</div>
+<div id="dashboardIncidents" class="incident-list"></div>
 
 </div>
 
@@ -726,22 +650,13 @@ class="incident-list"
 
 <!-- OFFICERS -->
 
-<section
-id="panel-officers"
-class="panel"
->
+<section id="panel-officers" class="panel">
 
 <div class="card">
 
-<h2>
-👮 Officers On Shift
-</h2>
+<h2>👮 Officers On Shift</h2>
 
-<div
-id="officerList"
-class="officer-list"
->
-</div>
+<div id="officerList" class="officer-list"></div>
 
 </div>
 
@@ -750,57 +665,29 @@ class="officer-list"
 
 <!-- INCIDENTS -->
 
-<section
-id="panel-incidents"
-class="panel"
->
+<section id="panel-incidents" class="panel">
 
 <div class="card">
 
-<h2>
-➕ Log New Incident
-</h2>
+<h2>➕ Log New Incident</h2>
 
 <form id="incidentForm">
 
 <div class="incident-form">
 
-
 <div class="field">
 
-<label>
-Incident Type
-</label>
+<label>Incident Type</label>
 
 <select id="incidentType" required>
 
-<option value="">
-Select incident
-</option>
-
-<option>
-Disturbance
-</option>
-
-<option>
-Medical Emergency
-</option>
-
-<option>
-Security Alert
-</option>
-
-<option>
-Contraband Report
-</option>
-
-<option>
-Welfare Check
-</option>
-
-<option>
-Other
-</option>
+<option value="">Select incident</option>
+<option>Disturbance</option>
+<option>Medical Emergency</option>
+<option>Security Alert</option>
+<option>Contraband Report</option>
+<option>Welfare Check</option>
+<option>Other</option>
 
 </select>
 
@@ -809,27 +696,14 @@ Other
 
 <div class="field">
 
-<label>
-Priority
-</label>
+<label>Priority</label>
 
 <select id="incidentPriority">
 
-<option>
-Low
-</option>
-
-<option>
-Medium
-</option>
-
-<option>
-High
-</option>
-
-<option>
-Critical
-</option>
+<option>Low</option>
+<option>Medium</option>
+<option>High</option>
+<option>Critical</option>
 
 </select>
 
@@ -838,9 +712,7 @@ Critical
 
 <div class="field">
 
-<label>
-Location
-</label>
+<label>Location</label>
 
 <input
 id="incidentLocation"
@@ -855,9 +727,7 @@ maxlength="100"
 
 <div class="field">
 
-<label>
-Responding Unit
-</label>
+<label>Responding Unit</label>
 
 <input
 id="incidentUnit"
@@ -871,9 +741,7 @@ maxlength="50"
 
 <div class="field full">
 
-<label>
-Description
-</label>
+<label>Description</label>
 
 <textarea
 id="incidentDescription"
@@ -905,15 +773,9 @@ type="submit"
 
 <div class="card">
 
-<h2>
-📋 Incident History
-</h2>
+<h2>📋 Incident History</h2>
 
-<div
-id="incidentList"
-class="incident-list"
->
-</div>
+<div id="incidentList" class="incident-list"></div>
 
 </div>
 
@@ -922,29 +784,17 @@ class="incident-list"
 
 <!-- CHAT -->
 
-<section
-id="panel-chat"
-class="panel"
->
+<section id="panel-chat" class="panel">
 
 <div class="card">
 
-<h2>
-💬 Officer Chat
-</h2>
+<h2>💬 Officer Chat</h2>
 
 <div class="chat">
 
-<div
-id="messages"
-class="messages"
->
-</div>
+<div id="messages" class="messages"></div>
 
-<form
-id="chatForm"
-class="send"
->
+<form id="chatForm" class="send">
 
 <input
 id="chatInput"
@@ -955,10 +805,7 @@ maxlength="500"
 required
 >
 
-<button
-class="btn primary"
-type="submit"
->
+<button class="btn primary" type="submit">
 Send
 </button>
 
@@ -969,7 +816,6 @@ Send
 </div>
 
 </section>
-
 
 </main>
 
@@ -985,24 +831,22 @@ Send
 VALLEY DISPATCH
 ========================================
 
-This version uses localStorage.
+This uses browser localStorage.
 
-It works between index.html and
-dispatch.html in the SAME browser.
+It allows index.html and dispatch.html
+to use the same stored information when
+they are on the same browser/domain.
 
-It does NOT sync between different
-people's computers.
-
+For different people's computers,
+a shared database such as Supabase is
+required.
 ========================================
 */
-
 
 let currentOfficer = null;
 
 
-/* ================================
-   STORAGE
-================================ */
+/* STORAGE */
 
 function getOfficers(){
 
@@ -1012,7 +856,7 @@ return JSON.parse(
 localStorage.getItem("valley_officers") || "[]"
 );
 
-}catch{
+}catch(error){
 
 return [];
 
@@ -1039,7 +883,7 @@ return JSON.parse(
 localStorage.getItem("valley_incidents") || "[]"
 );
 
-}catch{
+}catch(error){
 
 return [];
 
@@ -1066,7 +910,7 @@ return JSON.parse(
 localStorage.getItem("valley_messages") || "[]"
 );
 
-}catch{
+}catch(error){
 
 return [];
 
@@ -1085,9 +929,7 @@ JSON.stringify(messages)
 }
 
 
-/* ================================
-   LOGIN
-================================ */
+/* LOGIN */
 
 document
 .getElementById("loginForm")
@@ -1114,28 +956,21 @@ return;
 }
 
 
-currentOfficer = {
+currentOfficer={
 name:name,
 rank:rank
 };
 
 
-/* Get current officers */
-
-let officers = getOfficers();
+let officers=getOfficers();
 
 
-/* Remove existing officer with same name */
-
-officers =
-officers.filter(
+officers=officers.filter(
 officer =>
 officer.name.toLowerCase()
 !== name.toLowerCase()
 );
 
-
-/* Add officer */
 
 officers.push({
 
@@ -1149,17 +984,12 @@ lastSeen:Date.now()
 
 saveOfficers(officers);
 
-
-/* Open dispatch */
-
 showDispatch();
 
 });
 
 
-/* ================================
-   SHOW APP
-================================ */
+/* SHOW DISPATCH */
 
 function showDispatch(){
 
@@ -1173,9 +1003,9 @@ document
 
 document
 .getElementById("currentUser")
-.textContent =
-currentOfficer.name +
-" • " +
+.textContent=
+currentOfficer.name+
+" • "+
 currentOfficer.rank;
 
 refreshEverything();
@@ -1183,25 +1013,21 @@ refreshEverything();
 }
 
 
-/* ================================
-   GO OFF DUTY
-================================ */
+/* GO OFF DUTY */
 
 document
 .getElementById("offDutyButton")
 .addEventListener("click",function(){
 
 if(!currentOfficer){
-
 return;
-
 }
 
-let officers = getOfficers();
+
+let officers=getOfficers();
 
 
-officers =
-officers.filter(
+officers=officers.filter(
 officer =>
 officer.name.toLowerCase()
 !== currentOfficer.name.toLowerCase()
@@ -1211,7 +1037,7 @@ officer.name.toLowerCase()
 saveOfficers(officers);
 
 
-currentOfficer = null;
+currentOfficer=null;
 
 
 document
@@ -1231,9 +1057,7 @@ refreshEverything();
 });
 
 
-/* ================================
-   NAVIGATION
-================================ */
+/* NAVIGATION */
 
 document
 .querySelectorAll(".nav-btn")
@@ -1257,7 +1081,7 @@ this.classList.add("active");
 
 document
 .getElementById(
-"panel-" + this.dataset.panel
+"panel-"+this.dataset.panel
 )
 .classList.add("active");
 
@@ -1266,27 +1090,24 @@ document
 });
 
 
-/* ================================
-   OFFICERS
-================================ */
+/* OFFICERS */
 
 function loadOfficers(){
 
-const officers =
-getOfficers();
+const officers=getOfficers();
 
-const onShift =
-officers.filter(
-officer => officer.onShift
+const onShift=officers.filter(
+officer=>officer.onShift
 );
+
 
 document
 .getElementById("officerCount")
-.textContent =
+.textContent=
 onShift.length;
 
 
-const lists = [
+const lists=[
 
 document.getElementById("officerList"),
 
@@ -1299,7 +1120,7 @@ if(!onShift.length){
 
 lists.forEach(list=>{
 
-list.innerHTML =
+list.innerHTML=
 '<div class="empty">No officers currently on shift.</div>';
 
 });
@@ -1309,7 +1130,7 @@ return;
 }
 
 
-const html =
+const html=
 onShift.map(officer=>`
 
 <div class="officer">
@@ -1342,17 +1163,13 @@ ON SHIFT
 
 
 lists.forEach(list=>{
-
 list.innerHTML=html;
-
 });
 
 }
 
 
-/* ================================
-   INCIDENTS
-================================ */
+/* INCIDENTS */
 
 document
 .getElementById("incidentForm")
@@ -1361,14 +1178,11 @@ document
 event.preventDefault();
 
 if(!currentOfficer){
-
 return;
-
 }
 
 
-const incidents =
-getIncidents();
+const incidents=getIncidents();
 
 
 const incident={
@@ -1415,7 +1229,6 @@ Date.now()
 
 incidents.unshift(incident);
 
-
 saveIncidents(incidents);
 
 
@@ -1431,13 +1244,12 @@ loadIncidents();
 
 function loadIncidents(){
 
-const incidents =
-getIncidents();
+const incidents=getIncidents();
 
 
 document
 .getElementById("incidentCount")
-.textContent =
+.textContent=
 incidents.length;
 
 
@@ -1454,7 +1266,7 @@ if(!incidents.length){
 
 lists.forEach(list=>{
 
-list.innerHTML =
+list.innerHTML=
 '<div class="empty">No incidents logged yet.</div>';
 
 });
@@ -1464,7 +1276,7 @@ return;
 }
 
 
-const createHTML = incident => `
+const createHTML=incident=>`
 
 <div class="incident">
 
@@ -1487,9 +1299,7 @@ ${escapeHTML(incident.time)}
 </div>
 
 <div class="incident-location">
-
 📍 ${escapeHTML(incident.location)}
-
 </div>
 
 <div class="incident-description">
@@ -1501,7 +1311,7 @@ ${escapeHTML(incident.description)}
 <span style="color:#747c87">
 
 Unit:
-${escapeHTML(incident.unit || "Not assigned")}
+${escapeHTML(incident.unit||"Not assigned")}
 
 •
 
@@ -1517,13 +1327,11 @@ ${escapeHTML(incident.officer)}
 `;
 
 
-lists[0].innerHTML =
-incidents
-.map(createHTML)
-.join("");
+lists[0].innerHTML=
+incidents.map(createHTML).join("");
 
 
-lists[1].innerHTML =
+lists[1].innerHTML=
 incidents
 .slice(0,5)
 .map(createHTML)
@@ -1532,9 +1340,7 @@ incidents
 }
 
 
-/* ================================
-   CHAT
-================================ */
+/* CHAT */
 
 document
 .getElementById("chatForm")
@@ -1543,44 +1349,35 @@ document
 event.preventDefault();
 
 if(!currentOfficer){
-
 return;
-
 }
 
 
-const input =
+const input=
 document.getElementById("chatInput");
 
-const text =
+const text=
 input.value.trim();
 
 if(!text){
-
 return;
-
 }
 
 
-const messages =
-getMessages();
+const messages=getMessages();
 
 
 messages.push({
 
-name:
-currentOfficer.name,
+name:currentOfficer.name,
 
-rank:
-currentOfficer.rank,
+rank:currentOfficer.rank,
 
 text:text,
 
-time:
-new Date().toLocaleTimeString(),
+time:new Date().toLocaleTimeString(),
 
-timestamp:
-Date.now()
+timestamp:Date.now()
 
 });
 
@@ -1590,7 +1387,6 @@ saveMessages(messages);
 
 input.value="";
 
-
 loadMessages();
 
 });
@@ -1598,17 +1394,15 @@ loadMessages();
 
 function loadMessages(){
 
-const messages =
-getMessages();
+const messages=getMessages();
 
-
-const container =
+const container=
 document.getElementById("messages");
 
 
 if(!messages.length){
 
-container.innerHTML =
+container.innerHTML=
 '<div class="empty">No messages yet.</div>';
 
 return;
@@ -1616,7 +1410,7 @@ return;
 }
 
 
-container.innerHTML =
+container.innerHTML=
 messages
 .map(message=>`
 
@@ -1647,34 +1441,24 @@ ${escapeHTML(message.text)}
 .join("");
 
 
-container.scrollTop =
+container.scrollTop=
 container.scrollHeight;
 
 }
 
 
-/* ================================
-   REFRESH
-================================ */
+/* REFRESH */
 
 function refreshEverything(){
 
 loadOfficers();
-
 loadIncidents();
-
 loadMessages();
 
 }
 
 
-/*
-Refresh every second.
-
-This means if another tab of the
-same browser changes the data,
-the dispatch screen updates quickly.
-*/
+/* Refresh the display regularly */
 
 setInterval(function(){
 
@@ -1683,8 +1467,8 @@ refreshEverything();
 },1000);
 
 
-/* Also update when another tab
-   changes localStorage */
+/* Listen for changes from another
+browser tab on the same origin */
 
 window.addEventListener(
 "storage",
@@ -1695,9 +1479,7 @@ refreshEverything();
 });
 
 
-/* ================================
-   SECURITY
-================================ */
+/* SECURITY */
 
 function escapeHTML(value){
 
