@@ -7,687 +7,743 @@
 <title>San Quentin State Roleplay</title>
 
 <style>
-*{box-sizing:border-box;margin:0;padding:0}
-
-html{scroll-behavior:smooth}
-
-body{
-  font-family:Arial,Helvetica,sans-serif;
-  background:#090b0f;
-  color:#f4f4f4;
-  line-height:1.6
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-a{color:inherit;text-decoration:none}
-button,input,textarea,select{font:inherit}
-button{cursor:pointer}
-
-.container{
-  width:min(1120px,92%);
-  margin:auto
+html {
+  scroll-behavior: smooth;
 }
 
-nav{
-  position:sticky;
-  top:0;
-  z-index:1000;
-  background:rgba(9,11,15,.95);
-  border-bottom:1px solid #252a31;
-  backdrop-filter:blur(10px)
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #090b0f;
+  color: #f4f4f4;
+  line-height: 1.6;
 }
 
-.nav-inner{
-  min-height:70px;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:20px
+a {
+  color: inherit;
+  text-decoration: none;
 }
 
-.logo{
-  font-size:20px;
-  font-weight:800
+button,
+input,
+textarea,
+select {
+  font: inherit;
 }
 
-.logo span{color:#b9bec6}
-
-.nav-links{
-  display:flex;
-  gap:20px;
-  flex-wrap:wrap;
-  justify-content:flex-end
+button {
+  cursor: pointer;
 }
 
-.nav-links a{
-  color:#c7cbd1;
-  font-size:14px;
-  font-weight:700
+.container {
+  width: min(1120px, 92%);
+  margin: auto;
 }
 
-.nav-links a:hover{color:white}
+/* NAVIGATION */
 
-.hero{
-  min-height:560px;
-  display:flex;
-  align-items:center;
-  text-align:center;
-  position:relative;
-  overflow:hidden;
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: rgba(9,11,15,.96);
+  border-bottom: 1px solid #252a31;
+  backdrop-filter: blur(10px);
+}
+
+.nav-inner {
+  min-height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.logo span {
+  color: #b9bec6;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.nav-links a {
+  color: #c7cbd1;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.nav-links a:hover {
+  color: white;
+}
+
+/* HERO */
+
+.hero {
+  min-height: 560px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
   background:
-    radial-gradient(circle at 50% 20%,rgba(255,255,255,.08),transparent 35%),
-    linear-gradient(180deg,#161a20 0%,#090b0f 100%)
+    radial-gradient(circle at 50% 20%, rgba(255,255,255,.08), transparent 35%),
+    linear-gradient(180deg,#161a20 0%,#090b0f 100%);
 }
 
-.hero-content{
-  position:relative;
-  z-index:2;
-  width:100%
+.hero-content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
 }
 
-.badge{
-  display:inline-block;
-  padding:7px 13px;
-  border:1px solid #3a4048;
-  border-radius:999px;
-  color:#cdd1d7;
-  background:rgba(255,255,255,.04);
-  font-size:12px;
-  font-weight:800;
-  text-transform:uppercase;
-  letter-spacing:1.5px;
-  margin-bottom:18px
+.badge {
+  display: inline-block;
+  padding: 7px 13px;
+  border: 1px solid #3a4048;
+  border-radius: 999px;
+  color: #cdd1d7;
+  background: rgba(255,255,255,.04);
+  font-size: 12px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: 18px;
 }
 
-.hero h1{
-  font-size:clamp(42px,7vw,78px);
-  line-height:1;
-  letter-spacing:-2px;
-  margin-bottom:18px
+.hero h1 {
+  font-size: clamp(42px,7vw,78px);
+  line-height: 1;
+  letter-spacing: -2px;
+  margin-bottom: 18px;
 }
 
-.hero p{
-  max-width:700px;
-  margin:auto;
-  color:#b7bcc4;
-  font-size:18px
+.hero p {
+  max-width: 700px;
+  margin: auto;
+  color: #b7bcc4;
+  font-size: 18px;
 }
 
-.hero-buttons{
-  margin-top:30px;
-  display:flex;
-  gap:12px;
-  justify-content:center;
-  flex-wrap:wrap
+.hero-buttons {
+  margin-top: 30px;
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
-.btn{
-  display:inline-block;
-  padding:12px 20px;
-  border-radius:8px;
-  border:1px solid #3b414a;
-  background:#171b21;
-  color:white;
-  font-weight:800;
-  font-size:14px;
-  transition:.2s
+/* BUTTONS */
+
+.btn {
+  display: inline-block;
+  padding: 12px 20px;
+  border-radius: 8px;
+  border: 1px solid #3b414a;
+  background: #171b21;
+  color: white;
+  font-weight: 800;
+  font-size: 14px;
+  transition: .2s;
 }
 
-.btn:hover{
-  transform:translateY(-2px);
-  background:#22272e
+.btn:hover {
+  transform: translateY(-2px);
+  background: #22272e;
 }
 
-.btn.primary{
-  background:#f1f1f1;
-  color:#090b0f;
-  border-color:#f1f1f1
+.btn.primary {
+  background: #f1f1f1;
+  color: #090b0f;
+  border-color: #f1f1f1;
 }
 
-section{
-  padding:78px 0;
-  border-bottom:1px solid #1c2026
+/* SECTIONS */
+
+section {
+  padding: 78px 0;
+  border-bottom: 1px solid #1c2026;
 }
 
-.section-title{
-  text-align:center;
-  margin-bottom:42px
+.section-title {
+  text-align: center;
+  margin-bottom: 42px;
 }
 
-.section-title h2{
-  font-size:34px;
-  margin-bottom:8px
+.section-title h2 {
+  font-size: 34px;
+  margin-bottom: 8px;
 }
 
-.section-title p{color:#9298a1}
-
-.session-card{
-  background:linear-gradient(145deg,#15191f,#0e1115);
-  border:1px solid #2a3038;
-  border-radius:16px;
-  padding:28px;
-  display:grid;
-  grid-template-columns:1.3fr 1fr;
-  gap:30px
+.section-title p {
+  color: #9298a1;
 }
 
-.session-main h3{
-  font-size:26px;
-  margin-bottom:10px
+/* SESSION */
+
+.session-card {
+  background: linear-gradient(145deg,#15191f,#0e1115);
+  border: 1px solid #2a3038;
+  border-radius: 16px;
+  padding: 28px;
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 30px;
+  box-shadow: 0 15px 45px rgba(0,0,0,.25);
 }
 
-.session-main p{
-  color:#aeb4bd;
-  margin-bottom:20px
+.session-main h3 {
+  font-size: 26px;
+  margin-bottom: 10px;
 }
 
-.status{
-  display:inline-flex;
-  align-items:center;
-  gap:9px;
-  padding:8px 12px;
-  border-radius:8px;
-  background:rgba(60,190,105,.1);
-  border:1px solid rgba(60,190,105,.35);
-  color:#8ee5aa;
-  font-weight:800;
-  font-size:13px
+.session-main p {
+  color: #aeb4bd;
+  margin-bottom: 20px;
 }
 
-.status-dot{
-  width:9px;
-  height:9px;
-  background:#63d986;
-  border-radius:50%;
-  box-shadow:0 0 10px rgba(99,217,134,.7)
+.status {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  background: rgba(60,190,105,.1);
+  border: 1px solid rgba(60,190,105,.35);
+  color: #8ee5aa;
+  font-weight: 800;
+  font-size: 13px;
 }
 
-.session-info{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:12px
+.status-dot {
+  width: 9px;
+  height: 9px;
+  background: #63d986;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(99,217,134,.7);
 }
 
-.info-box{
-  background:#0b0e12;
-  border:1px solid #272c34;
-  border-radius:10px;
-  padding:16px
+.session-info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
 }
 
-.info-box small{
-  display:block;
-  color:#7f8792;
-  margin-bottom:4px;
-  font-size:11px;
-  text-transform:uppercase
+.info-box {
+  background: #0b0e12;
+  border: 1px solid #272c34;
+  border-radius: 10px;
+  padding: 16px;
 }
 
-.grid{
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:16px
+.info-box small {
+  display: block;
+  color: #7f8792;
+  margin-bottom: 4px;
+  font-size: 11px;
+  text-transform: uppercase;
 }
 
-.card,.community-card{
-  background:#111419;
-  border:1px solid #262b32;
-  border-radius:13px;
-  padding:23px
+.info-box strong {
+  font-size: 15px;
 }
 
-.card:hover{
-  transform:translateY(-4px);
-  border-color:#454c56
+/* CARDS */
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 16px;
 }
 
-.card-icon{
-  font-size:27px;
-  margin-bottom:12px
+.card,
+.community-card {
+  background: #111419;
+  border: 1px solid #262b32;
+  border-radius: 13px;
+  padding: 23px;
 }
 
-.card h3,.community-card h3{
-  margin-bottom:8px
+.card:hover {
+  transform: translateY(-4px);
 }
 
-.card p,.community-card p{
-  color:#969da7;
-  font-size:14px
+.card-icon {
+  font-size: 27px;
+  margin-bottom: 12px;
 }
 
-.community-grid{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:16px
+.card h3,
+.community-card h3 {
+  margin-bottom: 7px;
+}
+
+.card p,
+.community-card p {
+  color: #969da7;
+  font-size: 14px;
+}
+
+.community-grid {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 16px;
+}
+
+.support-button {
+  text-align: center;
+  margin-top: 30px;
 }
 
 /* DISPATCH */
 
-.dispatch-section{
+.dispatch-section {
   background:
     radial-gradient(circle at top right,rgba(255,255,255,.04),transparent 35%),
-    #0b0e12
+    #0b0e12;
 }
 
 .dispatch-login,
-.dispatch-app{
-  background:#111419;
-  border:1px solid #292f37;
-  border-radius:16px;
-  box-shadow:0 20px 55px rgba(0,0,0,.28)
+.dispatch-app {
+  background: #111419;
+  border: 1px solid #292f37;
+  border-radius: 16px;
+  box-shadow: 0 20px 55px rgba(0,0,0,.28);
 }
 
-.dispatch-login{
-  max-width:520px;
-  margin:auto;
-  padding:30px
+.dispatch-login {
+  max-width: 520px;
+  margin: auto;
+  padding: 30px;
 }
 
-.dispatch-login h3{
-  font-size:25px;
-  margin-bottom:8px
+.dispatch-login h3 {
+  font-size: 25px;
+  margin-bottom: 8px;
 }
 
-.dispatch-login p{
-  color:#9298a1;
-  margin-bottom:22px
+.dispatch-login p {
+  color: #9298a1;
+  margin-bottom: 22px;
 }
 
-.field{margin-bottom:15px}
+.field {
+  margin-bottom: 15px;
+}
 
-.field label{
-  display:block;
-  color:#cdd1d7;
-  font-size:13px;
-  font-weight:700;
-  margin-bottom:7px
+.field label {
+  display: block;
+  color: #cdd1d7;
+  font-size: 13px;
+  font-weight: 700;
+  margin-bottom: 7px;
 }
 
 .field input,
 .field textarea,
-.field select{
-  width:100%;
-  background:#090b0f;
-  border:1px solid #303640;
-  color:white;
-  border-radius:8px;
-  padding:12px;
-  outline:none
-}
-
-.field textarea{
-  min-height:100px;
-  resize:vertical
+.field select {
+  width: 100%;
+  background: #090b0f;
+  border: 1px solid #303640;
+  color: white;
+  border-radius: 8px;
+  padding: 12px;
+  outline: none;
 }
 
 .field input:focus,
 .field textarea:focus,
-.field select:focus{
-  border-color:#777f8b
+.field select:focus {
+  border-color: #777f8b;
 }
 
-.dispatch-message{
-  min-height:22px;
-  margin-top:12px;
-  color:#f0a0a0;
-  font-size:13px
+.field textarea {
+  min-height: 100px;
+  resize: vertical;
 }
 
-.dispatch-app{
-  display:none;
-  overflow:hidden
+.dispatch-message {
+  min-height: 22px;
+  margin-top: 12px;
+  color: #f0a0a0;
+  font-size: 13px;
 }
 
-.dispatch-topbar{
-  padding:18px 22px;
-  border-bottom:1px solid #292f37;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  gap:15px;
-  flex-wrap:wrap
+.dispatch-app {
+  display: none;
+  overflow: hidden;
 }
 
-.dispatch-title{
-  display:flex;
-  align-items:center;
-  gap:12px
+.dispatch-topbar {
+  padding: 18px 22px;
+  border-bottom: 1px solid #292f37;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: wrap;
 }
 
-.dispatch-title h3{font-size:22px}
-
-.live-badge{
-  display:inline-flex;
-  align-items:center;
-  gap:7px;
-  padding:5px 9px;
-  border-radius:999px;
-  background:rgba(60,190,105,.1);
-  color:#8ee5aa;
-  border:1px solid rgba(60,190,105,.3);
-  font-size:11px;
-  font-weight:800
+.dispatch-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
 }
 
-.dispatch-body{
-  display:grid;
-  grid-template-columns:220px 1fr;
-  min-height:650px
+.dispatch-title h3 {
+  font-size: 22px;
 }
 
-.dispatch-sidebar{
-  border-right:1px solid #292f37;
-  padding:18px;
-  background:#0d1014
+.live-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 5px 9px;
+  border-radius: 999px;
+  background: rgba(60,190,105,.1);
+  color: #8ee5aa;
+  border: 1px solid rgba(60,190,105,.3);
+  font-size: 11px;
+  font-weight: 800;
 }
 
-.dispatch-nav-btn{
-  width:100%;
-  text-align:left;
-  border:1px solid transparent;
-  background:transparent;
-  color:#aeb4bd;
-  padding:11px 12px;
-  border-radius:8px;
-  margin-bottom:6px;
-  font-weight:700
+.dispatch-body {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  min-height: 650px;
+}
+
+.dispatch-sidebar {
+  border-right: 1px solid #292f37;
+  padding: 18px;
+  background: #0d1014;
+}
+
+.dispatch-sidebar-title {
+  color: #686f79;
+  text-transform: uppercase;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  margin: 18px 10px 8px;
+}
+
+.dispatch-nav-btn {
+  width: 100%;
+  text-align: left;
+  border: 1px solid transparent;
+  background: transparent;
+  color: #aeb4bd;
+  padding: 11px 12px;
+  border-radius: 8px;
+  margin-bottom: 6px;
+  font-weight: 700;
 }
 
 .dispatch-nav-btn:hover,
-.dispatch-nav-btn.active{
-  background:#191e24;
-  border-color:#303640;
-  color:white
+.dispatch-nav-btn.active {
+  background: #191e24;
+  border-color: #303640;
+  color: white;
 }
 
-.dispatch-sidebar-title{
-  color:#686f79;
-  text-transform:uppercase;
-  font-size:10px;
-  font-weight:800;
-  letter-spacing:1px;
-  margin:18px 10px 8px
+.dispatch-main {
+  padding: 22px;
+  overflow: auto;
 }
 
-.dispatch-main{
-  padding:22px;
-  overflow:auto
+.dispatch-panel {
+  display: none;
 }
 
-.dispatch-panel{display:none}
-
-.dispatch-panel.active{display:block}
-
-.dispatch-stats{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:12px;
-  margin-bottom:18px
+.dispatch-panel.active {
+  display: block;
 }
 
-.dispatch-stat{
-  background:#0b0e12;
-  border:1px solid #282e36;
-  border-radius:10px;
-  padding:16px
+.dispatch-stats {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 12px;
+  margin-bottom: 18px;
 }
 
-.dispatch-stat small{
-  display:block;
-  color:#747c87;
-  text-transform:uppercase;
-  font-size:10px;
-  letter-spacing:.8px;
-  margin-bottom:4px
+.dispatch-stat {
+  background: #0b0e12;
+  border: 1px solid #282e36;
+  border-radius: 10px;
+  padding: 16px;
 }
 
-.dispatch-stat strong{font-size:24px}
-
-.dispatch-card{
-  background:#0d1014;
-  border:1px solid #282e36;
-  border-radius:12px;
-  padding:18px;
-  margin-bottom:15px
+.dispatch-stat small {
+  display: block;
+  color: #747c87;
+  text-transform: uppercase;
+  font-size: 10px;
+  margin-bottom: 4px;
 }
 
-.dispatch-card h4{margin-bottom:14px}
-
-.incident-form{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:13px
+.dispatch-stat strong {
+  font-size: 24px;
 }
 
-.incident-form .full{
-  grid-column:1/-1
+.dispatch-card {
+  background: #0d1014;
+  border: 1px solid #282e36;
+  border-radius: 12px;
+  padding: 18px;
+  margin-bottom: 15px;
 }
 
-.incident-actions{
-  display:flex;
-  gap:10px;
-  flex-wrap:wrap
+.dispatch-card h4 {
+  margin-bottom: 14px;
 }
 
-.incident-list{
-  display:grid;
-  gap:10px
+.incident-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 13px;
 }
 
-.incident-item{
-  background:#111419;
-  border:1px solid #292f37;
-  border-radius:10px;
-  padding:14px
+.incident-form .full {
+  grid-column: 1/-1;
 }
 
-.incident-header{
-  display:flex;
-  justify-content:space-between;
-  gap:10px;
-  align-items:center;
-  margin-bottom:7px
+.incident-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
 }
 
-.incident-type{font-weight:800}
-
-.incident-time{
-  color:#747c87;
-  font-size:11px
+.incident-list {
+  display: grid;
+  gap: 10px;
 }
 
-.incident-location{
-  color:#aeb4bd;
-  font-size:13px
+.incident-item {
+  background: #111419;
+  border: 1px solid #292f37;
+  border-radius: 10px;
+  padding: 14px;
 }
 
-.incident-description{
-  color:#9298a1;
-  font-size:13px;
-  margin-top:6px
+.incident-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 7px;
 }
 
-.officer-list{
-  display:grid;
-  gap:9px
+.incident-type {
+  font-weight: 800;
 }
 
-.officer{
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:10px;
-  background:#111419;
-  border:1px solid #292f37;
-  border-radius:9px;
-  padding:12px
+.incident-time {
+  color: #747c87;
+  font-size: 11px;
 }
 
-.officer-left{
-  display:flex;
-  align-items:center;
-  gap:10px
+.incident-location {
+  color: #aeb4bd;
+  font-size: 13px;
 }
 
-.online-dot,
-.offline-dot{
-  width:9px;
-  height:9px;
-  border-radius:50%
+.incident-description {
+  color: #9298a1;
+  font-size: 13px;
+  margin-top: 6px;
 }
 
-.online-dot{
-  background:#63d986;
-  box-shadow:0 0 8px rgba(99,217,134,.6)
+/* OFFICERS */
+
+.officer-list {
+  display: grid;
+  gap: 9px;
 }
 
-.offline-dot{background:#666d76}
-
-.officer-name{
-  font-weight:800;
-  font-size:14px
+.officer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #111419;
+  border: 1px solid #292f37;
+  border-radius: 9px;
+  padding: 12px;
 }
 
-.officer-role{
-  color:#747c87;
-  font-size:11px
+.officer-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
-.chat-box{
-  height:420px;
-  display:flex;
-  flex-direction:column
+.online-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #63d986;
+  box-shadow: 0 0 8px rgba(99,217,134,.6);
 }
 
-.chat-messages{
-  flex:1;
-  overflow-y:auto;
-  background:#090b0f;
-  border:1px solid #292f37;
-  border-radius:10px;
-  padding:13px;
-  margin-bottom:10px
+.officer-name {
+  font-weight: 800;
+  font-size: 14px;
 }
 
-.chat-message{margin-bottom:12px}
-
-.chat-author{
-  font-size:12px;
-  font-weight:800
+.officer-role {
+  color: #747c87;
+  font-size: 11px;
 }
 
-.chat-time{
-  color:#666d76;
-  font-size:10px;
-  margin-left:6px
+/* CHAT */
+
+.chat-box {
+  height: 420px;
+  display: flex;
+  flex-direction: column;
 }
 
-.chat-text{
-  color:#c3c7ce;
-  font-size:13px;
-  margin-top:2px
+.chat-messages {
+  flex: 1;
+  overflow-y: auto;
+  background: #090b0f;
+  border: 1px solid #292f37;
+  border-radius: 10px;
+  padding: 13px;
+  margin-bottom: 10px;
 }
 
-.chat-send{
-  display:flex;
-  gap:8px
+.chat-message {
+  margin-bottom: 12px;
 }
 
-.chat-send input{
-  flex:1;
-  background:#090b0f;
-  border:1px solid #303640;
-  color:white;
-  border-radius:8px;
-  padding:11px
+.chat-author {
+  font-size: 12px;
+  font-weight: 800;
 }
 
-.logout-btn{
-  border:1px solid #393f47;
-  background:transparent;
-  color:#aeb4bd;
-  border-radius:7px;
-  padding:8px 12px;
-  font-weight:700
+.chat-time {
+  color: #666d76;
+  font-size: 10px;
+  margin-left: 6px;
 }
 
-.logout-btn:hover{
-  background:#191e24;
-  color:white
+.chat-text {
+  color: #c3c7ce;
+  font-size: 13px;
+  margin-top: 2px;
 }
 
-.empty-state{
-  text-align:center;
-  padding:35px;
-  color:#747c87
+.chat-send {
+  display: flex;
+  gap: 8px;
 }
 
-footer{
-  padding:30px 0;
-  text-align:center;
-  color:#737a84;
-  font-size:13px
+.chat-send input {
+  flex: 1;
+  background: #090b0f;
+  border: 1px solid #303640;
+  color: white;
+  border-radius: 8px;
+  padding: 11px;
 }
 
-@media(max-width:850px){
+.logout-btn {
+  border: 1px solid #393f47;
+  background: transparent;
+  color: #aeb4bd;
+  border-radius: 7px;
+  padding: 8px 12px;
+  font-weight: 700;
+}
 
-  .grid{
-    grid-template-columns:repeat(2,1fr)
+.logout-btn:hover {
+  background: #191e24;
+  color: white;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 35px;
+  color: #747c87;
+}
+
+/* MOBILE */
+
+@media(max-width:850px) {
+
+  .grid {
+    grid-template-columns: repeat(2,1fr);
   }
 
-  .session-card{
-    grid-template-columns:1fr
+  .session-card {
+    grid-template-columns: 1fr;
   }
 
-  .community-grid{
-    grid-template-columns:1fr
+  .community-grid {
+    grid-template-columns: 1fr;
   }
 
-  .dispatch-body{
-    grid-template-columns:1fr
+  .dispatch-body {
+    grid-template-columns: 1fr;
   }
 
-  .dispatch-sidebar{
-    border-right:0;
-    border-bottom:1px solid #292f37
+  .dispatch-sidebar {
+    border-right: 0;
+    border-bottom: 1px solid #292f37;
   }
 
-  .dispatch-stats{
-    grid-template-columns:1fr
+  .dispatch-stats {
+    grid-template-columns: 1fr;
   }
 }
 
-@media(max-width:600px){
+@media(max-width:600px) {
 
-  .nav-inner{
-    padding:12px 0;
-    align-items:flex-start;
-    flex-direction:column
+  .nav-inner {
+    padding: 12px 0;
+    align-items: flex-start;
+    flex-direction: column;
   }
 
-  .hero{
-    min-height:500px
+  .hero {
+    min-height: 500px;
   }
 
-  .hero p{font-size:16px}
-
-  .grid{
-    grid-template-columns:1fr
+  .hero p {
+    font-size: 16px;
   }
 
-  .session-info{
-    grid-template-columns:1fr
+  .grid {
+    grid-template-columns: 1fr;
   }
 
-  section{
-    padding:58px 0
+  .session-info {
+    grid-template-columns: 1fr;
   }
 
-  .incident-form{
-    grid-template-columns:1fr
+  section {
+    padding: 58px 0;
   }
 
-  .incident-form .full{
-    grid-column:auto
+  .incident-form {
+    grid-template-columns: 1fr;
+  }
+
+  .incident-form .full {
+    grid-column: auto;
   }
 }
 </style>
@@ -716,11 +772,17 @@ San Quentin <span>State Roleplay</span>
 </nav>
 
 <header class="hero" id="home">
+
 <div class="container hero-content">
 
-<div class="badge">Official Roleplay Community</div>
+<div class="badge">
+Official Roleplay Community
+</div>
 
-<h1>San Quentin<br>State Roleplay</h1>
+<h1>
+San Quentin<br>
+State Roleplay
+</h1>
 
 <p>
 Enter the yard. Build your story. Create realistic, organised
@@ -738,15 +800,22 @@ View Daily Sessions
 </a>
 
 </div>
+
 </div>
 </header>
 
 <section id="sessions">
+
 <div class="container">
 
 <div class="section-title">
+
 <h2>📅 Daily Sessions</h2>
-<p>Stay up to date with San Quentin State Roleplay sessions.</p>
+
+<p>
+Stay up to date with the latest San Quentin State Roleplay sessions.
+</p>
+
 </div>
 
 <div class="session-card">
@@ -764,7 +833,7 @@ Daily Prison Roleplay
 
 <p>
 Join organised sessions throughout the day and take part in
-realistic prison roleplay, department activities and events.
+realistic prison roleplay, department activities and community events.
 </p>
 
 <a class="btn primary" href="#departments">
@@ -797,15 +866,22 @@ View Departments
 
 </div>
 </div>
+
 </div>
 </section>
 
 <section id="departments">
+
 <div class="container">
 
 <div class="section-title">
+
 <h2>Departments</h2>
-<p>Choose your role and help build the San Quentin experience.</p>
+
+<p>
+Choose your role and help build the San Quentin experience.
+</p>
+
 </div>
 
 <div class="grid">
@@ -813,25 +889,33 @@ View Departments
 <div class="card">
 <div class="card-icon">👮</div>
 <h3>Corrections</h3>
-<p>Maintain security and manage the facility.</p>
+<p>
+Maintain security, manage the facility and participate in prison roleplay.
+</p>
 </div>
 
 <div class="card">
 <div class="card-icon">🚔</div>
 <h3>Law Enforcement</h3>
-<p>Respond to incidents and support the roleplay environment.</p>
+<p>
+Respond to incidents and support the wider roleplay environment.
+</p>
 </div>
 
 <div class="card">
 <div class="card-icon">🚑</div>
 <h3>Medical</h3>
-<p>Provide emergency response and medical roleplay.</p>
+<p>
+Provide emergency response and medical roleplay throughout the server.
+</p>
 </div>
 
 <div class="card">
 <div class="card-icon">🛡️</div>
 <h3>Staff Team</h3>
-<p>Keep the community organised and enjoyable.</p>
+<p>
+Keep the community organised, fair and enjoyable for everyone.
+</p>
 </div>
 
 </div>
@@ -849,7 +933,7 @@ View Departments
 <h2>🚨 Valley Dispatch</h2>
 
 <p>
-Real-time dispatch system for authorised members.
+Dispatch incidents, monitor officers and communicate with your team.
 </p>
 
 </div>
@@ -858,10 +942,12 @@ Real-time dispatch system for authorised members.
 
 <div id="dispatchLogin" class="dispatch-login">
 
-<h3>Valley Dispatch Login</h3>
+<h3>
+Valley Dispatch Login
+</h3>
 
 <p>
-Sign in with your authorised account to access Dispatch.
+Enter your authorised account and your current rank to go on duty.
 </p>
 
 <form id="loginForm">
@@ -896,8 +982,23 @@ required
 
 </div>
 
+<div class="field">
+
+<label for="loginRank">
+Rank
+</label>
+
+<input
+id="loginRank"
+type="text"
+placeholder="Example: Sergeant"
+required
+>
+
+</div>
+
 <button class="btn primary" type="submit">
-🔐 Sign In
+🔐 Sign In & Go On Duty
 </button>
 
 <div id="loginMessage" class="dispatch-message"></div>
@@ -906,7 +1007,7 @@ required
 
 </div>
 
-<!-- APP -->
+<!-- DISPATCH APPLICATION -->
 
 <div id="dispatchApp" class="dispatch-app">
 
@@ -914,7 +1015,9 @@ required
 
 <div class="dispatch-title">
 
-<h3>🚨 Valley Dispatch</h3>
+<h3>
+🚨 Valley Dispatch
+</h3>
 
 <span class="live-badge">
 <span class="status-dot"></span>
@@ -930,11 +1033,15 @@ id="currentUserName"
 style="margin-right:10px;color:#aeb4bd;"
 ></span>
 
-<button id="logoutButton" class="logout-btn">
+<button
+id="logoutButton"
+class="logout-btn"
+>
 Logout
 </button>
 
 </div>
+
 </div>
 
 <div class="dispatch-body">
@@ -979,7 +1086,10 @@ data-panel="chat"
 
 <!-- DASHBOARD -->
 
-<div id="panel-dashboard" class="dispatch-panel active">
+<div
+id="panel-dashboard"
+class="dispatch-panel active"
+>
 
 <div class="dispatch-stats">
 
@@ -1027,20 +1137,27 @@ ONLINE
 Latest Incidents
 </h4>
 
-<div id="dashboardIncidents" class="incident-list">
+<div
+id="dashboardIncidents"
+class="incident-list"
+>
 
 <div class="empty-state">
 No incidents logged yet.
 </div>
 
 </div>
+
 </div>
 
 </div>
 
 <!-- INCIDENTS -->
 
-<div id="panel-incidents" class="dispatch-panel">
+<div
+id="panel-incidents"
+class="dispatch-panel"
+>
 
 <div class="dispatch-card">
 
@@ -1054,7 +1171,7 @@ No incidents logged yet.
 
 <div class="field">
 
-<label>
+<label for="incidentType">
 Incident Type
 </label>
 
@@ -1077,15 +1194,19 @@ Security Alert
 </option>
 
 <option>
-Missing Person
+Contraband
 </option>
 
 <option>
-Suspicious Activity
+Assault
 </option>
 
 <option>
-Welfare Check
+Disorderly Conduct
+</option>
+
+<option>
+Staff Assistance
 </option>
 
 <option>
@@ -1098,7 +1219,7 @@ Other
 
 <div class="field">
 
-<label>
+<label for="incidentPriority">
 Priority
 </label>
 
@@ -1126,7 +1247,7 @@ Critical
 
 <div class="field">
 
-<label>
+<label for="incidentLocation">
 Location
 </label>
 
@@ -1141,7 +1262,7 @@ required
 
 <div class="field">
 
-<label>
+<label for="incidentUnit">
 Responding Unit
 </label>
 
@@ -1155,7 +1276,7 @@ placeholder="Example: Unit 12"
 
 <div class="field full">
 
-<label>
+<label for="incidentDescription">
 Description
 </label>
 
@@ -1169,7 +1290,10 @@ required
 
 <div class="full incident-actions">
 
-<button class="btn primary" type="submit">
+<button
+class="btn primary"
+type="submit"
+>
 🚨 Log Incident
 </button>
 
@@ -1181,7 +1305,9 @@ class="dispatch-message"
 </div>
 
 </div>
+
 </form>
+
 </div>
 
 <div class="dispatch-card">
@@ -1190,7 +1316,10 @@ class="dispatch-message"
 📋 Incident History
 </h4>
 
-<div id="incidentList" class="incident-list">
+<div
+id="incidentList"
+class="incident-list"
+>
 
 <div class="empty-state">
 Loading incidents...
@@ -1204,22 +1333,28 @@ Loading incidents...
 
 <!-- OFFICERS -->
 
-<div id="panel-officers" class="dispatch-panel">
+<div
+id="panel-officers"
+class="dispatch-panel"
+>
 
 <div class="dispatch-card">
 
 <h4>
-👮 Officers On Shift
+👮 Officers Currently On Shift
 </h4>
 
-<p style="color:#747c87;font-size:13px;margin-bottom:15px;">
-This list updates automatically when officers sign in or leave Dispatch.
+<p style="color:#747c87;margin-bottom:15px;font-size:13px;">
+This list updates automatically when officers sign in or leave.
 </p>
 
-<div id="officerList" class="officer-list">
+<div
+id="officerList"
+class="officer-list"
+>
 
 <div class="empty-state">
-Loading officers...
+No officers currently on shift.
 </div>
 
 </div>
@@ -1230,7 +1365,10 @@ Loading officers...
 
 <!-- CHAT -->
 
-<div id="panel-chat" class="dispatch-panel">
+<div
+id="panel-chat"
+class="dispatch-panel"
+>
 
 <div class="dispatch-card">
 
@@ -1240,7 +1378,10 @@ Loading officers...
 
 <div class="chat-box">
 
-<div id="chatMessages" class="chat-messages">
+<div
+id="chatMessages"
+class="chat-messages"
+>
 
 <div class="empty-state">
 Loading messages...
@@ -1248,7 +1389,10 @@ Loading messages...
 
 </div>
 
-<form id="chatForm" class="chat-send">
+<form
+id="chatForm"
+class="chat-send"
+>
 
 <input
 id="chatInput"
@@ -1258,22 +1402,29 @@ autocomplete="off"
 required
 >
 
-<button class="btn primary" type="submit">
+<button
+class="btn primary"
+type="submit"
+>
 Send
 </button>
 
 </form>
 
 </div>
+
 </div>
 
 </div>
 
 </main>
-</div>
+
 </div>
 
 </div>
+
+</div>
+
 </section>
 
 <section id="rules">
@@ -1293,28 +1444,45 @@ Our rules help keep roleplay fair, organised and enjoyable.
 <div class="community-grid">
 
 <div class="community-card">
-<h3>Respect Everyone</h3>
+
+<h3>
+Respect Everyone
+</h3>
+
 <p>
 Treat players and staff respectfully.
 </p>
+
 </div>
 
 <div class="community-card">
-<h3>Stay In Character</h3>
+
+<h3>
+Stay In Character
+</h3>
+
 <p>
 Keep roleplay immersive and follow the scenario.
 </p>
+
 </div>
 
 <div class="community-card">
-<h3>Follow Staff</h3>
+
+<h3>
+Follow Staff
+</h3>
+
 <p>
-Listen to reasonable staff instructions.
+Listen to reasonable staff instructions during sessions.
 </p>
+
 </div>
 
 </div>
+
 </div>
+
 </section>
 
 <section id="applications">
@@ -1334,28 +1502,45 @@ Interested in joining a department or helping the community?
 <div class="community-grid">
 
 <div class="community-card">
-<h3>Department Applications</h3>
+
+<h3>
+Department Applications
+</h3>
+
 <p>
-Apply to become part of a roleplay department.
+Apply to become part of one of our roleplay departments.
 </p>
+
 </div>
 
 <div class="community-card">
-<h3>Staff Applications</h3>
+
+<h3>
+Staff Applications
+</h3>
+
 <p>
-Help manage sessions and support players.
+Help manage sessions, support players and improve the community.
 </p>
+
 </div>
 
 <div class="community-card">
-<h3>Training</h3>
+
+<h3>
+Training
+</h3>
+
 <p>
-Complete required training before taking responsibilities.
+Complete the required training before taking on certain responsibilities.
 </p>
+
 </div>
 
 </div>
+
 </div>
+
 </section>
 
 <section id="support">
@@ -1375,29 +1560,44 @@ Need help? Our community team is here to assist.
 <div class="community-grid">
 
 <div class="community-card">
-<h3>Community Support</h3>
+
+<h3>
+Community Support
+</h3>
+
 <p>
-Speak with a member of staff if you need assistance.
+Speak with a member of the staff team if you need assistance.
 </p>
+
 </div>
 
 <div class="community-card">
-<h3>Report an Issue</h3>
+
+<h3>
+Report an Issue
+</h3>
+
 <p>
-Report problems or rule-breaking to staff.
+Report problems or rule-breaking to the appropriate staff member.
 </p>
+
 </div>
 
 <div class="community-card">
-<h3>Questions</h3>
+
+<h3>
+Questions
+</h3>
+
 <p>
-Ask staff if you are unsure about anything.
+Ask staff if you are unsure about departments or sessions.
 </p>
-</div>
 
 </div>
 
-<div style="text-align:center;margin-top:30px;">
+</div>
+
+<div class="support-button">
 
 <a
 class="btn primary"
@@ -1411,12 +1611,12 @@ rel="noopener noreferrer"
 </div>
 
 </div>
+
 </section>
 
 <footer>
 © 2026 San Quentin State Roleplay • Community Roleplay Project
 </footer>
-
 
 <!-- SUPABASE -->
 
@@ -1425,17 +1625,22 @@ rel="noopener noreferrer"
 <script>
 
 /*
-==========================================================
+============================================================
 SUPABASE CONFIG
-==========================================================
+============================================================
 
 YOUR PROJECT URL:
 https://nrzjwazpyexvctahtvrp.supabase.co
 
-PASTE YOUR PUBLISHABLE KEY BETWEEN THE QUOTES BELOW.
+PUT YOUR PUBLISHABLE KEY BETWEEN THE QUOTES BELOW.
 
-DO NOT USE THE SECRET KEY.
-==========================================================
+Example:
+
+const SUPABASE_PUBLISHABLE_KEY =
+"sb_publishable_xxxxxxxxx";
+
+DO NOT PUT YOUR SECRET KEY HERE.
+============================================================
 */
 
 const SUPABASE_URL =
@@ -1444,20 +1649,26 @@ const SUPABASE_URL =
 const SUPABASE_PUBLISHABLE_KEY =
 "PASTE_YOUR_PUBLISHABLE_KEY_HERE";
 
+
 const supabaseClient =
 window.supabase.createClient(
 SUPABASE_URL,
 SUPABASE_PUBLISHABLE_KEY
 );
 
+
 let currentUser = null;
+let currentRank = "";
+let dispatchPresenceChannel = null;
 
 
-/* LOGIN */
+/* =========================================================
+LOGIN
+========================================================= */
 
 document
 .getElementById("loginForm")
-.addEventListener("submit",async function(event){
+.addEventListener("submit", async function(event) {
 
 event.preventDefault();
 
@@ -1467,173 +1678,360 @@ document.getElementById("loginEmail").value.trim();
 const password =
 document.getElementById("loginPassword").value;
 
+const rank =
+document.getElementById("loginRank").value.trim();
+
 const message =
 document.getElementById("loginMessage");
 
-message.textContent="Signing in...";
+if (!rank) {
 
-const {data,error} =
-await supabaseClient.auth.signInWithPassword({
-email,
-password
-});
+message.textContent =
+"Please enter your rank.";
 
-if(error){
-
-message.textContent=error.message;
 return;
 
 }
 
-currentUser=data.user;
+message.style.color = "#aeb4bd";
+message.textContent =
+"Signing in...";
 
-await setOfficerOnline();
+
+const { data, error } =
+await supabaseClient.auth.signInWithPassword({
+
+email: email,
+password: password
+
+});
+
+
+if (error) {
+
+message.style.color = "#f0a0a0";
+
+message.textContent =
+error.message;
+
+return;
+
+}
+
+
+currentUser =
+data.user;
+
+currentRank =
+rank;
+
 
 showDispatch();
 
 });
 
 
-/* SHOW DISPATCH */
+/* =========================================================
+SHOW DISPATCH
+========================================================= */
 
-function showDispatch(){
+async function showDispatch() {
 
-document.getElementById("dispatchLogin").style.display="none";
+document
+.getElementById("dispatchLogin")
+.style.display = "none";
 
-document.getElementById("dispatchApp").style.display="block";
+document
+.getElementById("dispatchApp")
+.style.display = "block";
 
-document.getElementById("currentUserName").textContent=
-currentUser?.email || "Officer";
+
+document
+.getElementById("currentUserName")
+.textContent =
+(currentUser?.email || "Officer") +
+" • " +
+currentRank;
+
+
+await startOfficerPresence();
 
 loadIncidents();
-loadOfficers();
 loadMessages();
 
 }
 
 
-/* MARK OFFICER ONLINE */
+/* =========================================================
+REAL-TIME OFFICER PRESENCE
+========================================================= */
 
-async function setOfficerOnline(){
+async function startOfficerPresence() {
 
-if(!currentUser) return;
+if (dispatchPresenceChannel) {
 
-const name =
-currentUser.user_metadata?.full_name ||
-currentUser.user_metadata?.name ||
-currentUser.email?.split("@")[0] ||
-"Officer";
-
-const {data,error} =
 await supabaseClient
-.from("officers")
-.upsert({
+.removeChannel(dispatchPresenceChannel);
 
-id:currentUser.id,
+}
 
-name:name,
+
+dispatchPresenceChannel =
+supabaseClient.channel(
+"valley-dispatch-officers",
+{
+config: {
+presence: {
+key: currentUser.id
+}
+}
+}
+);
+
+
+dispatchPresenceChannel
+.on(
+"presence",
+{
+event: "sync"
+},
+function() {
+
+renderOnlineOfficers();
+
+}
+)
+.on(
+"presence",
+{
+event: "join"
+},
+function() {
+
+renderOnlineOfficers();
+
+}
+)
+.on(
+"presence",
+{
+event: "leave"
+},
+function() {
+
+renderOnlineOfficers();
+
+}
+);
+
+
+await dispatchPresenceChannel.subscribe(
+async function(status) {
+
+if (status === "SUBSCRIBED") {
+
+await dispatchPresenceChannel.track({
+
+user_id: currentUser.id,
+
+name:
+currentUser.email || "Officer",
 
 rank:
-currentUser.user_metadata?.rank || "Officer",
+currentRank,
 
-role:
-currentUser.user_metadata?.role || "Officer",
+online: true,
 
-online:true,
-
-on_shift:true,
-
-last_seen:new Date().toISOString()
+joined_at:
+new Date().toISOString()
 
 });
 
-if(error){
-
-console.error(
-"Could not mark officer online:",
-error
-);
-
 }
+
+});
 
 }
 
 
-/* MARK OFFICER OFFLINE */
+/* =========================================================
+RENDER REAL-TIME OFFICERS
+========================================================= */
 
-async function setOfficerOffline(){
+function renderOnlineOfficers() {
 
-if(!currentUser) return;
-
-const {error} =
-await supabaseClient
-.from("officers")
-.update({
-
-online:false,
-
-on_shift:false,
-
-last_seen:new Date().toISOString()
-
-})
-.eq("id",currentUser.id);
-
-if(error){
-console.error(error);
-}
-
+if (!dispatchPresenceChannel) {
+return;
 }
 
 
-/* LOGOUT */
+const state =
+dispatchPresenceChannel.presenceState();
+
+
+const officers = [];
+
+
+Object.keys(state).forEach(function(key) {
+
+const entries =
+state[key];
+
+entries.forEach(function(entry) {
+
+officers.push(entry);
+
+});
+
+});
+
+
+const list =
+document.getElementById("officerList");
+
+
+document.getElementById("totalOfficers")
+.textContent =
+officers.length;
+
+
+if (!officers.length) {
+
+list.innerHTML =
+'<div class="empty-state">No officers currently on shift.</div>';
+
+return;
+
+}
+
+
+list.innerHTML =
+officers.map(function(officer) {
+
+return `
+
+<div class="officer">
+
+<div class="officer-left">
+
+<span class="online-dot"></span>
+
+<div>
+
+<div class="officer-name">
+${escapeHTML(officer.name || "Officer")}
+</div>
+
+<div class="officer-role">
+${escapeHTML(officer.rank || "Officer")}
+</div>
+
+</div>
+
+</div>
+
+<span style="font-size:11px;color:#8ee5aa;">
+ON SHIFT
+</span>
+
+</div>
+
+`;
+
+}).join("");
+
+}
+
+
+/* =========================================================
+LOGOUT
+========================================================= */
 
 document
 .getElementById("logoutButton")
-.addEventListener("click",async function(){
+.addEventListener("click", async function() {
 
-await setOfficerOffline();
+
+if (dispatchPresenceChannel) {
+
+await dispatchPresenceChannel.untrack();
+
+await supabaseClient
+.removeChannel(dispatchPresenceChannel);
+
+dispatchPresenceChannel = null;
+
+}
+
 
 await supabaseClient.auth.signOut();
 
-currentUser=null;
 
-document.getElementById("dispatchLogin").style.display="block";
+currentUser = null;
+currentRank = "";
 
-document.getElementById("dispatchApp").style.display="none";
+
+document
+.getElementById("dispatchLogin")
+.style.display = "block";
+
+document
+.getElementById("dispatchApp")
+.style.display = "none";
+
+
+document
+.getElementById("loginPassword")
+.value = "";
+
+document
+.getElementById("loginRank")
+.value = "";
 
 });
 
 
-/* NAVIGATION */
+/* =========================================================
+DISPATCH NAVIGATION
+========================================================= */
 
 document
 .querySelectorAll(".dispatch-nav-btn")
-.forEach(button=>{
+.forEach(function(button) {
 
-button.addEventListener("click",function(){
+button.addEventListener("click", function() {
 
 document
 .querySelectorAll(".dispatch-nav-btn")
-.forEach(btn=>
-btn.classList.remove("active")
-);
+.forEach(function(btn) {
+
+btn.classList.remove("active");
+
+});
+
 
 document
 .querySelectorAll(".dispatch-panel")
-.forEach(panel=>
-panel.classList.remove("active")
-);
+.forEach(function(panel) {
+
+panel.classList.remove("active");
+
+});
+
 
 this.classList.add("active");
 
-const panel=
+
+const panel =
 document.getElementById(
-"panel-"+this.dataset.panel
+"panel-" + this.dataset.panel
 );
 
-if(panel){
+
+if (panel) {
+
 panel.classList.add("active");
+
 }
 
 });
@@ -1641,54 +2039,67 @@ panel.classList.add("active");
 });
 
 
-/* INCIDENTS */
+/* =========================================================
+INCIDENTS
+========================================================= */
 
-async function loadIncidents(){
+async function loadIncidents() {
 
-const list=
+const list =
 document.getElementById("incidentList");
 
-const dashboard=
+const dashboard =
 document.getElementById("dashboardIncidents");
 
-const {data,error}=
+
+const { data, error } =
 await supabaseClient
 .from("incidents")
 .select("*")
-.order("created_at",{ascending:false})
+.order("created_at", {
+ascending: false
+})
 .limit(50);
 
-if(error){
 
-list.innerHTML=
+if (error) {
+
+list.innerHTML =
 '<div class="empty-state">Unable to load incidents.</div>';
 
-dashboard.innerHTML=
+dashboard.innerHTML =
 '<div class="empty-state">Unable to load incidents.</div>';
 
 console.error(error);
 
 return;
+
 }
 
-document.getElementById("totalIncidents").textContent=
+
+document.getElementById("totalIncidents")
+.textContent =
 data.length;
 
-if(!data.length){
 
-list.innerHTML=
+if (!data.length) {
+
+list.innerHTML =
 '<div class="empty-state">No incidents logged yet.</div>';
 
-dashboard.innerHTML=
+dashboard.innerHTML =
 '<div class="empty-state">No incidents logged yet.</div>';
 
 return;
+
 }
 
-list.innerHTML=
+
+list.innerHTML =
 data.map(createIncidentHTML).join("");
 
-dashboard.innerHTML=
+
+dashboard.innerHTML =
 data.slice(0,5)
 .map(createIncidentHTML)
 .join("");
@@ -1696,31 +2107,40 @@ data.slice(0,5)
 }
 
 
-/* INCIDENT HTML */
+/* =========================================================
+INCIDENT DISPLAY
+========================================================= */
 
-function createIncidentHTML(incident){
+function createIncidentHTML(incident) {
 
-const time=
+const time =
 incident.created_at
-?new Date(incident.created_at).toLocaleString()
-:"Unknown time";
+? new Date(
+incident.created_at
+).toLocaleString()
+: "Unknown time";
 
-const type=
+
+const type =
 incident.incident_type ||
 incident.type ||
 "Incident";
 
-const location=
+
+const location =
 incident.location ||
 "Unknown location";
 
-const description=
+
+const description =
 incident.description ||
 "No description provided.";
 
-const priority=
+
+const priority =
 incident.priority ||
 "Medium";
+
 
 return `
 
@@ -1759,21 +2179,28 @@ ${escapeHTML(description)}
 }
 
 
-/* CREATE INCIDENT */
+/* =========================================================
+CREATE INCIDENT
+========================================================= */
 
 document
 .getElementById("incidentForm")
-.addEventListener("submit",async function(event){
+.addEventListener("submit", async function(event) {
 
 event.preventDefault();
 
-const message=
+
+const message =
 document.getElementById("incidentMessage");
 
-message.textContent=
+
+message.style.color = "#aeb4bd";
+
+message.textContent =
 "Logging incident...";
 
-const incident={
+
+const incident = {
 
 incident_type:
 document.getElementById("incidentType").value,
@@ -1795,166 +2222,109 @@ currentUser?.id || null
 
 };
 
-const {error}=
+
+const { error } =
 await supabaseClient
 .from("incidents")
 .insert([incident]);
 
-if(error){
 
-message.textContent=
-"Could not log incident: "+error.message;
+if (error) {
+
+message.style.color = "#f0a0a0";
+
+message.textContent =
+"Could not log incident: " +
+error.message;
 
 console.error(error);
 
 return;
+
 }
 
-message.style.color="#8ee5aa";
 
-message.textContent=
+message.style.color = "#8ee5aa";
+
+message.textContent =
 "Incident logged successfully.";
 
-document.getElementById("incidentForm").reset();
+
+document
+.getElementById("incidentForm")
+.reset();
+
 
 await loadIncidents();
 
 });
 
 
-/* OFFICERS */
+/* =========================================================
+CHAT
+========================================================= */
 
-async function loadOfficers(){
+async function loadMessages() {
 
-const list=
-document.getElementById("officerList");
-
-const {data,error}=
-await supabaseClient
-.from("officers")
-.select("*")
-.order("name",{ascending:true});
-
-if(error){
-
-list.innerHTML=
-'<div class="empty-state">Unable to load officers.</div>';
-
-console.error(error);
-
-return;
-}
-
-
-/*
-Only show officers currently ON SHIFT.
-*/
-
-const onShift=
-data.filter(officer=>
-officer.on_shift===true
-);
-
-document.getElementById("totalOfficers").textContent=
-onShift.length;
-
-if(!onShift.length){
-
-list.innerHTML=
-'<div class="empty-state">No officers are currently on shift.</div>';
-
-return;
-}
-
-list.innerHTML=
-onShift.map(officer=>`
-
-<div class="officer">
-
-<div class="officer-left">
-
-<span class="online-dot"></span>
-
-<div>
-
-<div class="officer-name">
-${escapeHTML(officer.name||"Officer")}
-</div>
-
-<div class="officer-role">
-${escapeHTML(
-officer.rank||
-officer.role||
-"Officer"
-)}
-</div>
-
-</div>
-
-</div>
-
-<span style="font-size:11px;color:#8ee5aa;">
-ON SHIFT
-</span>
-
-</div>
-
-`).join("");
-
-}
-
-
-/* CHAT */
-
-async function loadMessages(){
-
-const container=
+const container =
 document.getElementById("chatMessages");
 
-const {data,error}=
+
+const { data, error } =
 await supabaseClient
 .from("messages")
 .select("*")
-.order("created_at",{ascending:true})
+.order("created_at", {
+ascending: true
+})
 .limit(100);
 
-if(error){
 
-container.innerHTML=
+if (error) {
+
+container.innerHTML =
 '<div class="empty-state">Unable to load chat.</div>';
 
 console.error(error);
 
 return;
+
 }
 
-if(!data.length){
 
-container.innerHTML=
+if (!data.length) {
+
+container.innerHTML =
 '<div class="empty-state">No messages yet. Start the conversation.</div>';
 
 return;
+
 }
 
-container.innerHTML=
-data.map(message=>{
 
-const time=
+container.innerHTML =
+data.map(function(message) {
+
+const time =
 message.created_at
-?new Date(message.created_at)
-.toLocaleTimeString()
-:"";
+? new Date(
+message.created_at
+).toLocaleTimeString()
+: "";
+
 
 return `
 
 <div class="chat-message">
 
 <span class="chat-author">
+
 ${escapeHTML(
-message.author_name||
-message.username||
+message.author_name ||
+message.username ||
 "Officer"
 )}
+
 </span>
 
 <span class="chat-time">
@@ -1962,11 +2332,13 @@ ${escapeHTML(time)}
 </span>
 
 <div class="chat-text">
+
 ${escapeHTML(
-message.content||
-message.message||
+message.content ||
+message.message ||
 ""
 )}
+
 </div>
 
 </div>
@@ -1975,111 +2347,120 @@ message.message||
 
 }).join("");
 
-container.scrollTop=
+
+container.scrollTop =
 container.scrollHeight;
 
 }
 
 
-/* SEND CHAT */
+/* =========================================================
+SEND CHAT
+========================================================= */
 
 document
 .getElementById("chatForm")
-.addEventListener("submit",async function(event){
+.addEventListener("submit", async function(event) {
 
 event.preventDefault();
 
-const input=
+
+const input =
 document.getElementById("chatInput");
 
-const text=
+
+const text =
 input.value.trim();
 
-if(!text)return;
 
-const {error}=
+if (!text) {
+return;
+}
+
+
+const { error } =
 await supabaseClient
 .from("messages")
 .insert([{
 
 author_id:
-currentUser?.id||null,
+currentUser?.id || null,
 
 author_name:
-currentUser?.email||"Officer",
+currentUser?.email || "Officer",
 
-content:text
+content:
+text
 
 }]);
 
-if(error){
+
+if (error) {
 
 alert(
-"Could not send message: "+
+"Could not send message: " +
 error.message
 );
 
 console.error(error);
 
 return;
+
 }
 
-input.value="";
+
+input.value = "";
 
 await loadMessages();
 
 });
 
 
-/* REALTIME */
+/* =========================================================
+REALTIME DATABASE UPDATES
+========================================================= */
 
 supabaseClient
-.channel("valley-dispatch-live")
+.channel("dispatch-database-realtime")
 
 .on(
 "postgres_changes",
 {
-event:"*",
-schema:"public",
-table:"officers"
+event: "*",
+schema: "public",
+table: "incidents"
 },
-()=>{
-loadOfficers();
-}
-)
+function() {
 
-.on(
-"postgres_changes",
-{
-event:"*",
-schema:"public",
-table:"incidents"
-},
-()=>{
 loadIncidents();
+
 }
 )
 
 .on(
 "postgres_changes",
 {
-event:"*",
-schema:"public",
-table:"messages"
+event: "*",
+schema: "public",
+table: "messages"
 },
-()=>{
+function() {
+
 loadMessages();
+
 }
 )
 
 .subscribe();
 
 
-/* SECURITY */
+/* =========================================================
+SECURITY
+========================================================= */
 
-function escapeHTML(value){
+function escapeHTML(value) {
 
-return String(value??"")
+return String(value ?? "")
 .replace(/&/g,"&amp;")
 .replace(/</g,"&lt;")
 .replace(/>/g,"&gt;")
@@ -2089,77 +2470,46 @@ return String(value??"")
 }
 
 
-/* SESSION CHECK */
+/* =========================================================
+CHECK EXISTING LOGIN
+========================================================= */
 
-async function checkSession(){
+async function checkSession() {
 
-const {data}=
-await supabaseClient.auth.getSession();
+const {
+data
+} =
+await supabaseClient
+.auth.getSession();
 
-if(data.session){
 
-currentUser=
+if (data.session) {
+
+currentUser =
 data.session.user;
 
-await setOfficerOnline();
+/*
+We cannot safely recover the rank from the
+browser session, so the officer will be asked
+to enter their rank again.
+*/
 
-showDispatch();
+document
+.getElementById("dispatchLogin")
+.style.display = "block";
 
 }
 
 }
+
 
 checkSession();
 
-
-/*
-Keep the officer's last_seen updated while
-they have the Dispatch page open.
-*/
-
-setInterval(async()=>{
-
-if(currentUser){
-
-await supabaseClient
-.from("officers")
-.update({
-
-online:true,
-
-on_shift:true,
-
-last_seen:new Date().toISOString()
-
-})
-.eq("id",currentUser.id);
-
-}
-
-},30000);
-
-
-/*
-When the browser is closed/navigated away,
-try to mark the officer off shift.
-*/
-
-window.addEventListener("beforeunload",()=>{
-
-if(!currentUser)return;
-
-supabaseClient
-.from("officers")
-.update({
-online:false,
-on_shift:false,
-last_seen:new Date().toISOString()
-})
-.eq("id",currentUser.id);
-
-});
-
 </script>
-
+  
+  const SUPABASE_PUBLISHABLE_KEY =
+  sb_publishable_maGehfJq5Hk_NiJxU2qR8w_MMiAd2Ja
+"sb_publishable_maGehfJq5Hk_NiJxU2qR8w_MMiAd2Ja";
+  
 </body>
 </html>
