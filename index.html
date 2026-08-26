@@ -10,47 +10,39 @@
 *{
   box-sizing:border-box;
   margin:0;
-  padding:0
+  padding:0;
 }
 
 html{
-  scroll-behavior:smooth
+  scroll-behavior:smooth;
 }
 
 body{
   font-family:Arial,Helvetica,sans-serif;
   background:#090b0f;
   color:#f4f4f4;
-  line-height:1.6
+  line-height:1.6;
 }
 
 a{
   text-decoration:none;
-  color:inherit
-}
-
-button,input,textarea,select{
-  font:inherit
-}
-
-button{
-  cursor:pointer
+  color:inherit;
 }
 
 .container{
   width:min(1120px,92%);
-  margin:auto
+  margin:auto;
 }
 
-/* NAVIGATION */
+/* NAV */
 
 nav{
   position:sticky;
   top:0;
   z-index:1000;
-  background:rgba(9,11,15,.96);
+  background:rgba(9,11,15,.97);
   border-bottom:1px solid #252a31;
-  backdrop-filter:blur(10px)
+  backdrop-filter:blur(10px);
 }
 
 .nav-inner{
@@ -58,32 +50,32 @@ nav{
   display:flex;
   align-items:center;
   justify-content:space-between;
-  gap:20px
+  gap:20px;
 }
 
 .logo{
   font-size:20px;
-  font-weight:800
+  font-weight:800;
 }
 
 .logo span{
-  color:#b9bec6
+  color:#b9bec6;
 }
 
 .nav-links{
   display:flex;
   gap:18px;
-  flex-wrap:wrap
+  flex-wrap:wrap;
 }
 
 .nav-links a{
   color:#c7cbd1;
   font-size:14px;
-  font-weight:700
+  font-weight:700;
 }
 
 .nav-links a:hover{
-  color:white
+  color:white;
 }
 
 /* HERO */
@@ -93,13 +85,18 @@ nav{
   display:flex;
   align-items:center;
   text-align:center;
+
   background:
-    radial-gradient(circle at 50% 20%,rgba(255,255,255,.08),transparent 35%),
-    linear-gradient(180deg,#161a20,#090b0f)
+    radial-gradient(
+      circle at 50% 20%,
+      rgba(255,255,255,.08),
+      transparent 35%
+    ),
+    linear-gradient(180deg,#161a20,#090b0f);
 }
 
 .hero-content{
-  width:100%
+  width:100%;
 }
 
 .badge{
@@ -113,21 +110,21 @@ nav{
   font-weight:800;
   text-transform:uppercase;
   letter-spacing:1.5px;
-  margin-bottom:18px
+  margin-bottom:18px;
 }
 
 .hero h1{
   font-size:clamp(42px,7vw,78px);
   line-height:1;
   letter-spacing:-2px;
-  margin-bottom:18px
+  margin-bottom:18px;
 }
 
 .hero p{
   max-width:700px;
   margin:auto;
   color:#b7bcc4;
-  font-size:18px
+  font-size:18px;
 }
 
 .hero-buttons{
@@ -135,7 +132,7 @@ nav{
   display:flex;
   gap:12px;
   justify-content:center;
-  flex-wrap:wrap
+  flex-wrap:wrap;
 }
 
 /* BUTTONS */
@@ -149,74 +146,80 @@ nav{
   color:white;
   font-weight:800;
   font-size:14px;
-  transition:.2s
+  transition:.2s;
 }
 
 .btn:hover{
   transform:translateY(-2px);
-  background:#22272e
+  background:#22272e;
 }
 
 .btn.primary{
   background:#f1f1f1;
   color:#090b0f;
-  border-color:#f1f1f1
+  border-color:#f1f1f1;
 }
 
 /* SECTIONS */
 
 section{
   padding:78px 0;
-  border-bottom:1px solid #1c2026
+  border-bottom:1px solid #1c2026;
 }
 
 .section-title{
   text-align:center;
-  margin-bottom:42px
+  margin-bottom:42px;
 }
 
 .section-title h2{
   font-size:34px;
-  margin-bottom:8px
+  margin-bottom:8px;
 }
 
 .section-title p{
-  color:#9298a1
+  color:#9298a1;
 }
 
-/* SESSIONS */
+/* SESSION */
 
 .session-card{
   background:linear-gradient(145deg,#15191f,#0e1115);
   border:1px solid #2a3038;
   border-radius:16px;
   padding:28px;
+
   display:grid;
   grid-template-columns:1.3fr 1fr;
-  gap:30px
+  gap:30px;
 }
 
 .session-main h3{
   font-size:26px;
-  margin-bottom:10px
+  margin-bottom:10px;
 }
 
 .session-main p{
   color:#aeb4bd;
-  margin-bottom:20px
+  margin-bottom:20px;
 }
 
 .status{
   display:inline-flex;
   align-items:center;
   gap:9px;
+
   padding:8px 12px;
+
   border-radius:8px;
+
   background:rgba(60,190,105,.1);
   border:1px solid rgba(60,190,105,.35);
+
   color:#8ee5aa;
+
   font-weight:800;
-  font-size:13px
+  font-size:13px;
 }
 
 .status-dot{
@@ -224,20 +227,20 @@ section{
   height:9px;
   background:#63d986;
   border-radius:50%;
-  display:inline-block
+  display:inline-block;
 }
 
 .session-info{
   display:grid;
   grid-template-columns:1fr 1fr;
-  gap:12px
+  gap:12px;
 }
 
 .info-box{
   background:#0b0e12;
   border:1px solid #272c34;
   border-radius:10px;
-  padding:16px
+  padding:16px;
 }
 
 .info-box small{
@@ -245,7 +248,7 @@ section{
   color:#7f8792;
   margin-bottom:4px;
   font-size:11px;
-  text-transform:uppercase
+  text-transform:uppercase;
 }
 
 /* CARDS */
@@ -253,7 +256,7 @@ section{
 .grid{
   display:grid;
   grid-template-columns:repeat(4,1fr);
-  gap:16px
+  gap:16px;
 }
 
 .card,
@@ -261,87 +264,99 @@ section{
   background:#111419;
   border:1px solid #262b32;
   border-radius:13px;
-  padding:23px
+  padding:23px;
 }
 
 .card-icon{
   font-size:27px;
-  margin-bottom:12px
+  margin-bottom:12px;
 }
 
 .card h3,
 .community-card h3{
-  margin-bottom:7px
+  margin-bottom:7px;
 }
 
 .card p,
 .community-card p{
   color:#969da7;
-  font-size:14px
+  font-size:14px;
 }
 
 .community-grid{
   display:grid;
   grid-template-columns:repeat(3,1fr);
-  gap:16px
+  gap:16px;
 }
 
-/* DISPATCH */
+/* DISPATCH SECTION */
 
 .dispatch-section{
   background:
-    radial-gradient(circle at top right,rgba(255,255,255,.04),transparent 35%),
-    #0b0e12
+    radial-gradient(
+      circle at top right,
+      rgba(255,255,255,.04),
+      transparent 35%
+    ),
+    #0b0e12;
 }
 
 .dispatch-card{
-  max-width:700px;
+  max-width:720px;
   margin:auto;
+
   background:#111419;
+
   border:1px solid #292f37;
+
   border-radius:16px;
+
   padding:35px;
+
   text-align:center;
-  box-shadow:0 20px 55px rgba(0,0,0,.28)
+
+  box-shadow:
+    0 20px 55px rgba(0,0,0,.28);
 }
 
 .dispatch-icon{
   font-size:55px;
-  margin-bottom:10px
+  margin-bottom:10px;
 }
 
 .dispatch-card h3{
   font-size:27px;
-  margin-bottom:10px
+  margin-bottom:10px;
 }
 
 .dispatch-card p{
   color:#9298a1;
-  max-width:560px;
-  margin:0 auto 25px
+  max-width:580px;
+  margin:0 auto 25px;
 }
 
 .dispatch-features{
   display:grid;
   grid-template-columns:repeat(3,1fr);
   gap:12px;
-  margin:25px 0
+  margin:25px 0;
 }
 
 .dispatch-feature{
   background:#0b0e12;
   border:1px solid #272c34;
   border-radius:10px;
-  padding:15px
-}
-
-.dispatch-feature strong{
-  display:block;
-  margin-top:5px
+  padding:15px;
 }
 
 .dispatch-feature span{
-  font-size:24px
+  display:block;
+  font-size:25px;
+  margin-bottom:5px;
+}
+
+.dispatch-feature strong{
+  font-size:13px;
 }
 
 /* FOOTER */
@@ -350,7 +365,7 @@ footer{
   padding:30px 0;
   text-align:center;
   color:#737a84;
-  font-size:13px
+  font-size:13px;
 }
 
 /* MOBILE */
@@ -358,19 +373,19 @@ footer{
 @media(max-width:850px){
 
   .grid{
-    grid-template-columns:repeat(2,1fr)
+    grid-template-columns:repeat(2,1fr);
   }
 
   .session-card{
-    grid-template-columns:1fr
+    grid-template-columns:1fr;
   }
 
   .community-grid{
-    grid-template-columns:1fr
+    grid-template-columns:1fr;
   }
 
   .dispatch-features{
-    grid-template-columns:1fr
+    grid-template-columns:1fr;
   }
 }
 
@@ -379,27 +394,27 @@ footer{
   .nav-inner{
     padding:12px 0;
     flex-direction:column;
-    align-items:flex-start
+    align-items:flex-start;
   }
 
   .hero{
-    min-height:500px
+    min-height:500px;
   }
 
   .grid{
-    grid-template-columns:1fr
+    grid-template-columns:1fr;
   }
 
   .session-info{
-    grid-template-columns:1fr
+    grid-template-columns:1fr;
   }
 
   section{
-    padding:58px 0
+    padding:58px 0;
   }
 
   .dispatch-card{
-    padding:25px 18px
+    padding:25px 18px;
   }
 }
 </style>
@@ -407,7 +422,9 @@ footer{
 
 <body>
 
+<!-- ============================= -->
 <!-- NAVIGATION -->
+<!-- ============================= -->
 
 <nav>
 
@@ -440,7 +457,9 @@ San Quentin <span>State Roleplay</span>
 </nav>
 
 
-<!-- HERO -->
+<!-- ============================= -->
+<!-- HOME -->
+<!-- ============================= -->
 
 <header class="hero" id="home">
 
@@ -462,15 +481,19 @@ organised and immersive prison roleplay.
 
 <div class="hero-buttons">
 
-<a class="btn primary" href="#sessions">
+<a
+class="btn primary"
+href="#sessions"
+>
 View Daily Sessions
 </a>
 
-<!-- OPENS DISPATCH IN NEW TAB -->
+
+<!-- THIS OPENS A COMPLETELY SEPARATE FILE -->
 
 <a
 class="btn"
-href="dispatch.html"
+href="./dispatch.html"
 target="_blank"
 rel="noopener noreferrer"
 >
@@ -484,7 +507,9 @@ rel="noopener noreferrer"
 </header>
 
 
+<!-- ============================= -->
 <!-- SESSIONS -->
+<!-- ============================= -->
 
 <section id="sessions">
 
@@ -499,6 +524,7 @@ Stay up to date with the latest San Quentin State Roleplay sessions.
 </p>
 
 </div>
+
 
 <div class="session-card">
 
@@ -518,14 +544,19 @@ Daily Prison Roleplay
 
 <p>
 Join organised sessions throughout the day and take part
-in realistic prison roleplay, department activities and community events.
+in realistic prison roleplay, department activities
+and community events.
 </p>
 
-<a class="btn primary" href="#departments">
+<a
+class="btn primary"
+href="#departments"
+>
 View Departments
 </a>
 
 </div>
+
 
 <div class="session-info">
 
@@ -570,7 +601,9 @@ View Departments
 </section>
 
 
+<!-- ============================= -->
 <!-- DEPARTMENTS -->
+<!-- ============================= -->
 
 <section id="departments">
 
@@ -586,6 +619,7 @@ Choose your role and help build the San Quentin experience.
 
 </div>
 
+
 <div class="grid">
 
 <div class="card">
@@ -595,7 +629,8 @@ Choose your role and help build the San Quentin experience.
 <h3>Corrections</h3>
 
 <p>
-Maintain security, manage the facility and participate in prison roleplay.
+Maintain security, manage the facility and participate
+in prison roleplay.
 </p>
 
 </div>
@@ -608,7 +643,8 @@ Maintain security, manage the facility and participate in prison roleplay.
 <h3>Law Enforcement</h3>
 
 <p>
-Respond to incidents and support the wider roleplay environment.
+Respond to incidents and support the wider roleplay
+environment.
 </p>
 
 </div>
@@ -621,7 +657,8 @@ Respond to incidents and support the wider roleplay environment.
 <h3>Medical</h3>
 
 <p>
-Provide emergency response and medical roleplay throughout the server.
+Provide emergency response and medical roleplay
+throughout the server.
 </p>
 
 </div>
@@ -634,7 +671,8 @@ Provide emergency response and medical roleplay throughout the server.
 <h3>Staff Team</h3>
 
 <p>
-Keep the community organised, fair and enjoyable for everyone.
+Keep the community organised, fair and enjoyable
+for everyone.
 </p>
 
 </div>
@@ -646,9 +684,14 @@ Keep the community organised, fair and enjoyable for everyone.
 </section>
 
 
+<!-- ============================= -->
 <!-- VALLEY DISPATCH -->
+<!-- ============================= -->
 
-<section id="dispatch" class="dispatch-section">
+<section
+id="dispatch"
+class="dispatch-section"
+>
 
 <div class="container">
 
@@ -662,6 +705,7 @@ Professional dispatching for San Quentin State Roleplay.
 
 </div>
 
+
 <div class="dispatch-card">
 
 <div class="dispatch-icon">
@@ -673,10 +717,11 @@ Valley Dispatch System
 </h3>
 
 <p>
-Our dispatch system allows authorised officers to go on duty,
-view officers currently on shift, log incidents and communicate
-with other officers.
+Our dispatch system allows authorised officers
+to go on duty, view officers currently on shift,
+log incidents and communicate with other officers.
 </p>
+
 
 <div class="dispatch-features">
 
@@ -684,33 +729,42 @@ with other officers.
 
 <span>👮</span>
 
-<strong>Officer Status</strong>
+<strong>
+Officers On Shift
+</strong>
 
 </div>
+
 
 <div class="dispatch-feature">
 
 <span>🚨</span>
 
-<strong>Incident Logs</strong>
+<strong>
+Incident Logs
+</strong>
 
 </div>
+
 
 <div class="dispatch-feature">
 
 <span>💬</span>
 
-<strong>Officer Chat</strong>
+<strong>
+Officer Chat
+</strong>
 
 </div>
 
 </div>
 
-<!-- IMPORTANT: SEPARATE DISPATCH PAGE -->
+
+<!-- SEPARATE PAGE -->
 
 <a
 class="btn primary"
-href="dispatch.html"
+href="./dispatch.html"
 target="_blank"
 rel="noopener noreferrer"
 >
@@ -724,7 +778,9 @@ rel="noopener noreferrer"
 </section>
 
 
+<!-- ============================= -->
 <!-- RULES -->
+<!-- ============================= -->
 
 <section id="rules">
 
@@ -740,11 +796,14 @@ Our rules help keep roleplay fair, organised and enjoyable.
 
 </div>
 
+
 <div class="community-grid">
 
 <div class="community-card">
 
-<h3>Respect Everyone</h3>
+<h3>
+Respect Everyone
+</h3>
 
 <p>
 Treat players and staff respectfully.
@@ -755,7 +814,9 @@ Treat players and staff respectfully.
 
 <div class="community-card">
 
-<h3>Stay In Character</h3>
+<h3>
+Stay In Character
+</h3>
 
 <p>
 Keep roleplay immersive and follow the scenario.
@@ -766,7 +827,9 @@ Keep roleplay immersive and follow the scenario.
 
 <div class="community-card">
 
-<h3>Follow Staff</h3>
+<h3>
+Follow Staff
+</h3>
 
 <p>
 Listen to reasonable staff instructions during sessions.
@@ -781,7 +844,9 @@ Listen to reasonable staff instructions during sessions.
 </section>
 
 
+<!-- ============================= -->
 <!-- APPLICATIONS -->
+<!-- ============================= -->
 
 <section id="applications">
 
@@ -797,11 +862,14 @@ Interested in joining a department or helping the community?
 
 </div>
 
+
 <div class="community-grid">
 
 <div class="community-card">
 
-<h3>Department Applications</h3>
+<h3>
+Department Applications
+</h3>
 
 <p>
 Apply to become part of one of our roleplay departments.
@@ -812,7 +880,9 @@ Apply to become part of one of our roleplay departments.
 
 <div class="community-card">
 
-<h3>Staff Applications</h3>
+<h3>
+Staff Applications
+</h3>
 
 <p>
 Help manage sessions and support players.
@@ -823,7 +893,9 @@ Help manage sessions and support players.
 
 <div class="community-card">
 
-<h3>Training</h3>
+<h3>
+Training
+</h3>
 
 <p>
 Complete the required training before taking on responsibilities.
@@ -838,7 +910,9 @@ Complete the required training before taking on responsibilities.
 </section>
 
 
+<!-- ============================= -->
 <!-- SUPPORT -->
+<!-- ============================= -->
 
 <section id="support">
 
@@ -854,11 +928,14 @@ Need help? Our community team is here to assist.
 
 </div>
 
+
 <div class="community-grid">
 
 <div class="community-card">
 
-<h3>Community Support</h3>
+<h3>
+Community Support
+</h3>
 
 <p>
 Speak with a member of the staff team if you need assistance.
@@ -869,7 +946,9 @@ Speak with a member of the staff team if you need assistance.
 
 <div class="community-card">
 
-<h3>Report an Issue</h3>
+<h3>
+Report an Issue
+</h3>
 
 <p>
 Report problems or rule-breaking to staff.
@@ -880,7 +959,9 @@ Report problems or rule-breaking to staff.
 
 <div class="community-card">
 
-<h3>Questions</h3>
+<h3>
+Questions
+</h3>
 
 <p>
 Ask staff if you are unsure about roleplay procedures.
@@ -909,11 +990,14 @@ rel="noopener noreferrer"
 </section>
 
 
+<!-- ============================= -->
 <!-- FOOTER -->
+<!-- ============================= -->
 
 <footer>
 
-© 2026 San Quentin State Roleplay • Community Roleplay Project
+© 2026 San Quentin State Roleplay
+• Community Roleplay Project
 
 </footer>
 
