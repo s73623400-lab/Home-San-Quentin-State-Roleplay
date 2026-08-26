@@ -6,17 +6,25 @@
 <title>Valley Dispatch</title>
 
 <style>
-*{box-sizing:border-box;margin:0;padding:0}
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
 
 body{
   font-family:Arial,Helvetica,sans-serif;
   background:#090b0f;
   color:#f4f4f4;
-  line-height:1.5;
 }
 
-button,input,textarea,select{font:inherit}
-button{cursor:pointer}
+button,input,textarea,select{
+  font:inherit;
+}
+
+button{
+  cursor:pointer;
+}
 
 .container{
   width:min(1200px,94%);
@@ -25,15 +33,12 @@ button{cursor:pointer}
 
 /* LOGIN */
 
-.login-page{
+#loginPage{
   min-height:100vh;
   display:flex;
   align-items:center;
   justify-content:center;
-  padding:25px;
-  background:
-    radial-gradient(circle at top right,rgba(255,255,255,.07),transparent 35%),
-    #090b0f;
+  padding:20px;
 }
 
 .login-box{
@@ -42,24 +47,24 @@ button{cursor:pointer}
   border:1px solid #292f37;
   border-radius:18px;
   padding:35px;
-  box-shadow:0 25px 70px rgba(0,0,0,.4);
+  box-shadow:0 20px 60px rgba(0,0,0,.4);
 }
 
-.login-logo{
+.login-icon{
   text-align:center;
   font-size:55px;
-  margin-bottom:8px;
+  margin-bottom:10px;
 }
 
 .login-box h1{
   text-align:center;
-  font-size:30px;
+  margin-bottom:8px;
 }
 
 .login-box p{
   text-align:center;
-  color:#8f969f;
-  margin:8px 0 25px;
+  color:#9298a1;
+  margin-bottom:25px;
 }
 
 .field{
@@ -68,9 +73,8 @@ button{cursor:pointer}
 
 .field label{
   display:block;
-  color:#cdd1d7;
   font-size:13px;
-  font-weight:700;
+  font-weight:bold;
   margin-bottom:7px;
 }
 
@@ -78,28 +82,26 @@ button{cursor:pointer}
 .field textarea,
 .field select{
   width:100%;
-  padding:12px;
-  border-radius:8px;
-  border:1px solid #303640;
   background:#090b0f;
   color:white;
+  border:1px solid #303640;
+  border-radius:8px;
+  padding:12px;
   outline:none;
 }
 
-.field input:focus,
-.field textarea:focus,
-.field select:focus{
-  border-color:#68717c;
+.field textarea{
+  min-height:110px;
+  resize:vertical;
 }
 
 .btn{
-  display:inline-block;
   border:1px solid #3b414a;
   background:#171b21;
   color:white;
   padding:11px 18px;
   border-radius:8px;
-  font-weight:800;
+  font-weight:bold;
 }
 
 .btn:hover{
@@ -109,18 +111,17 @@ button{cursor:pointer}
 .btn.primary{
   background:#f1f1f1;
   color:#090b0f;
-  border-color:#f1f1f1;
 }
 
 .login-btn{
   width:100%;
 }
 
-.error{
-  color:#ff9d9d;
-  font-size:13px;
-  margin-top:12px;
+#errorMessage{
+  color:#ff9b9b;
   text-align:center;
+  margin-top:12px;
+  font-size:13px;
 }
 
 /* APP */
@@ -132,8 +133,7 @@ button{cursor:pointer}
 .topbar{
   position:sticky;
   top:0;
-  z-index:20;
-  min-height:70px;
+  z-index:10;
   background:#0d1014;
   border-bottom:1px solid #292f37;
 }
@@ -141,32 +141,32 @@ button{cursor:pointer}
 .topbar-inner{
   min-height:70px;
   display:flex;
-  align-items:center;
   justify-content:space-between;
+  align-items:center;
   gap:15px;
 }
 
-.title{
+.dispatch-title{
   display:flex;
   align-items:center;
   gap:12px;
 }
 
-.title h1{
+.dispatch-title h1{
   font-size:22px;
 }
 
 .live{
-  display:inline-flex;
+  display:flex;
   align-items:center;
-  gap:7px;
+  gap:6px;
+  color:#8ee5aa;
+  background:rgba(60,190,105,.1);
+  border:1px solid rgba(60,190,105,.3);
   padding:5px 9px;
   border-radius:999px;
-  background:rgba(60,190,105,.1);
-  color:#8ee5aa;
-  border:1px solid rgba(60,190,105,.3);
-  font-size:11px;
-  font-weight:800;
+  font-size:10px;
+  font-weight:bold;
 }
 
 .dot{
@@ -189,12 +189,11 @@ button{cursor:pointer}
 }
 
 .logout{
-  border:1px solid #393f47;
   background:transparent;
   color:#aeb4bd;
+  border:1px solid #393f47;
   padding:8px 12px;
   border-radius:7px;
-  font-weight:700;
 }
 
 /* LAYOUT */
@@ -215,8 +214,7 @@ button{cursor:pointer}
   color:#686f79;
   text-transform:uppercase;
   font-size:10px;
-  font-weight:800;
-  letter-spacing:1px;
+  font-weight:bold;
   margin:15px 10px 8px;
 }
 
@@ -229,7 +227,7 @@ button{cursor:pointer}
   padding:11px 12px;
   border-radius:8px;
   margin-bottom:6px;
-  font-weight:700;
+  font-weight:bold;
 }
 
 .nav-btn:hover,
@@ -241,7 +239,6 @@ button{cursor:pointer}
 
 .main{
   padding:25px;
-  overflow:auto;
 }
 
 .panel{
@@ -304,9 +301,8 @@ button{cursor:pointer}
 
 .officer{
   display:flex;
-  align-items:center;
   justify-content:space-between;
-  gap:10px;
+  align-items:center;
   background:#111419;
   border:1px solid #292f37;
   border-radius:10px;
@@ -316,11 +312,11 @@ button{cursor:pointer}
 .officer-left{
   display:flex;
   align-items:center;
-  gap:11px;
+  gap:10px;
 }
 
 .officer-name{
-  font-weight:800;
+  font-weight:bold;
 }
 
 .officer-rank{
@@ -331,7 +327,7 @@ button{cursor:pointer}
 .on-duty{
   color:#8ee5aa;
   font-size:10px;
-  font-weight:800;
+  font-weight:bold;
 }
 
 /* INCIDENTS */
@@ -344,11 +340,6 @@ button{cursor:pointer}
 
 .full{
   grid-column:1/-1;
-}
-
-textarea{
-  min-height:110px;
-  resize:vertical;
 }
 
 .incident-list{
@@ -367,11 +358,10 @@ textarea{
   display:flex;
   justify-content:space-between;
   gap:10px;
-  margin-bottom:7px;
 }
 
 .incident-type{
-  font-weight:800;
+  font-weight:bold;
 }
 
 .incident-time{
@@ -382,18 +372,19 @@ textarea{
 .incident-location{
   color:#aeb4bd;
   font-size:13px;
+  margin-top:6px;
 }
 
 .incident-description{
   color:#9298a1;
   font-size:13px;
-  margin-top:6px;
+  margin-top:7px;
 }
 
 /* CHAT */
 
 .chat-box{
-  height:550px;
+  height:500px;
   display:flex;
   flex-direction:column;
 }
@@ -414,7 +405,7 @@ textarea{
 
 .message-author{
   font-size:12px;
-  font-weight:800;
+  font-weight:bold;
 }
 
 .message-time{
@@ -436,8 +427,8 @@ textarea{
 .chat-send input{
   flex:1;
   background:#090b0f;
-  border:1px solid #303640;
   color:white;
+  border:1px solid #303640;
   border-radius:8px;
   padding:11px;
 }
@@ -445,10 +436,8 @@ textarea{
 .empty{
   text-align:center;
   color:#747c87;
-  padding:35px;
+  padding:30px;
 }
-
-/* RESPONSIVE */
 
 @media(max-width:800px){
 
@@ -479,10 +468,6 @@ textarea{
 
 @media(max-width:600px){
 
-  .main{
-    padding:15px;
-  }
-
   .incident-form{
     grid-template-columns:1fr;
   }
@@ -496,17 +481,13 @@ textarea{
 
 <body>
 
-<!-- ========================= -->
 <!-- LOGIN -->
-<!-- ========================= -->
 
-<div id="loginPage" class="login-page">
+<div id="loginPage">
 
 <div class="login-box">
 
-<div class="login-logo">
-🚨
-</div>
+<div class="login-icon">🚨</div>
 
 <h1>Valley Dispatch</h1>
 
@@ -518,15 +499,13 @@ Enter your officer details to go on duty.
 
 <div class="field">
 
-<label for="officerName">
-Officer Name
-</label>
+<label>Name</label>
 
 <input
 id="officerName"
 type="text"
 placeholder="Your name"
-maxlength="40"
+maxlength="50"
 required
 >
 
@@ -534,15 +513,13 @@ required
 
 <div class="field">
 
-<label for="officerRank">
-Rank
-</label>
+<label>Rank</label>
 
 <input
 id="officerRank"
 type="text"
-placeholder="Officer, Sergeant, etc."
-maxlength="40"
+placeholder="Officer / Sergeant / etc."
+maxlength="50"
 required
 >
 
@@ -555,7 +532,7 @@ type="submit"
 🚨 GO ON DUTY
 </button>
 
-<div id="loginError" class="error"></div>
+<div id="errorMessage"></div>
 
 </form>
 
@@ -564,9 +541,7 @@ type="submit"
 </div>
 
 
-<!-- ========================= -->
-<!-- DISPATCH APP -->
-<!-- ========================= -->
+<!-- DISPATCH -->
 
 <div id="dispatchApp">
 
@@ -574,7 +549,7 @@ type="submit"
 
 <div class="container topbar-inner">
 
-<div class="title">
+<div class="dispatch-title">
 
 <h1>🚨 Valley Dispatch</h1>
 
@@ -607,8 +582,6 @@ Go Off Duty
 
 
 <div class="layout">
-
-<!-- SIDEBAR -->
 
 <aside class="sidebar">
 
@@ -647,8 +620,6 @@ data-panel="chat"
 </aside>
 
 
-<!-- MAIN -->
-
 <main class="main">
 
 
@@ -662,41 +633,18 @@ class="panel active"
 <div class="stats">
 
 <div class="stat">
-
-<small>
-Total Incidents
-</small>
-
-<strong id="totalIncidents">
-0
-</strong>
-
+<small>Incidents</small>
+<strong id="totalIncidents">0</strong>
 </div>
 
-
 <div class="stat">
-
-<small>
-Officers On Shift
-</small>
-
-<strong id="totalOfficers">
-0
-</strong>
-
+<small>Officers On Shift</small>
+<strong id="totalOfficers">0</strong>
 </div>
 
-
 <div class="stat">
-
-<small>
-System
-</small>
-
-<strong>
-ONLINE
-</strong>
-
+<small>System</small>
+<strong>ONLINE</strong>
 </div>
 
 </div>
@@ -750,7 +698,7 @@ class="panel"
 <div class="card">
 
 <h2>
-➕ Log New Incident
+➕ Log Incident
 </h2>
 
 <form id="incidentForm">
@@ -759,42 +707,20 @@ class="panel"
 
 <div class="field">
 
-<label>
-Incident Type
-</label>
+<label>Incident Type</label>
 
-<select
-id="incidentType"
-required
->
+<select id="incidentType" required>
 
 <option value="">
 Select incident
 </option>
 
-<option>
-Disturbance
-</option>
-
-<option>
-Medical Emergency
-</option>
-
-<option>
-Security Alert
-</option>
-
-<option>
-Contraband Report
-</option>
-
-<option>
-Welfare Check
-</option>
-
-<option>
-Other
-</option>
+<option>Disturbance</option>
+<option>Medical Emergency</option>
+<option>Security Alert</option>
+<option>Contraband Report</option>
+<option>Welfare Check</option>
+<option>Other</option>
 
 </select>
 
@@ -803,27 +729,14 @@ Other
 
 <div class="field">
 
-<label>
-Priority
-</label>
+<label>Priority</label>
 
 <select id="incidentPriority">
 
-<option>
-Low
-</option>
-
-<option>
-Medium
-</option>
-
-<option>
-High
-</option>
-
-<option>
-Critical
-</option>
+<option>Low</option>
+<option>Medium</option>
+<option>High</option>
+<option>Critical</option>
 
 </select>
 
@@ -832,9 +745,7 @@ Critical
 
 <div class="field">
 
-<label>
-Location
-</label>
+<label>Location</label>
 
 <input
 id="incidentLocation"
@@ -848,9 +759,7 @@ required
 
 <div class="field">
 
-<label>
-Responding Unit
-</label>
+<label>Responding Unit</label>
 
 <input
 id="incidentUnit"
@@ -863,9 +772,7 @@ placeholder="Unit 12"
 
 <div class="field full">
 
-<label>
-Description
-</label>
+<label>Description</label>
 
 <textarea
 id="incidentDescription"
@@ -904,11 +811,9 @@ type="submit"
 id="incidentList"
 class="incident-list"
 >
-
 <div class="empty">
 No incidents logged.
 </div>
-
 </div>
 
 </div>
@@ -933,11 +838,9 @@ class="panel"
 id="officerList"
 class="officer-list"
 >
-
 <div class="empty">
 No officers on shift.
 </div>
-
 </div>
 
 </div>
@@ -964,11 +867,9 @@ class="panel"
 id="messages"
 class="messages"
 >
-
 <div class="empty">
 No messages yet.
 </div>
-
 </div>
 
 <form
@@ -981,7 +882,6 @@ id="chatInput"
 type="text"
 placeholder="Message officers..."
 maxlength="500"
-autocomplete="off"
 required
 >
 
@@ -1016,17 +916,13 @@ Send
 
 /*
 ==================================================
-VALLEY DISPATCH
+SUPABASE SETTINGS
 ==================================================
 
-PUT YOUR SUPABASE DETAILS BELOW.
-
-IMPORTANT:
-Use your SUPABASE PROJECT URL.
-
-Use your PUBLISHABLE key.
+PUT YOUR EXISTING VALUES HERE.
 
 DO NOT USE YOUR SECRET KEY.
+USE YOUR PUBLISHABLE KEY.
 ==================================================
 */
 
@@ -1037,869 +933,731 @@ const SUPABASE_KEY =
 "sb_publishable_ePlH9YofszwJAJAtK_-o6Q_mCeRhGDP";
 
 
-/* =========================
-   SUPABASE CONNECTION
-========================= */
+const supabaseClient =
+window.supabase.createClient(
+  SUPABASE_URL,
+  SUPABASE_KEY
+);
 
-let supabaseClient = null;
-
-if(
-  SUPABASE_URL.startsWith("https://") &&
-  !SUPABASE_URL.includes("PASTE_") &&
-  !SUPABASE_KEY.includes("PASTE_")
-){
-
-  supabaseClient =
-    window.supabase.createClient(
-      SUPABASE_URL,
-      SUPABASE_KEY
-    );
-
-}
-
-
-/* =========================
-   CURRENT OFFICER
-========================= */
 
 let currentOfficer = null;
 
-let officerRefreshTimer = null;
-let incidentRefreshTimer = null;
-let messageRefreshTimer = null;
-
 
 /* =========================
-   LOGIN
+LOGIN
 ========================= */
 
 document
 .getElementById("loginForm")
-.addEventListener("submit",async function(event){
+.addEventListener("submit", async function(event){
 
-  event.preventDefault();
+event.preventDefault();
 
-  const name =
-    document
-    .getElementById("officerName")
-    .value
-    .trim();
+const name =
+document
+.getElementById("officerName")
+.value
+.trim();
 
-  const rank =
-    document
-    .getElementById("officerRank")
-    .value
-    .trim();
+const rank =
+document
+.getElementById("officerRank")
+.value
+.trim();
 
-  const error =
-    document.getElementById("loginError");
+const error =
+document.getElementById("errorMessage");
 
-  error.textContent = "";
+error.textContent = "";
 
-  if(!name || !rank){
-    error.textContent =
-      "Please enter your name and rank.";
-    return;
-  }
+if(!name || !rank){
 
-  currentOfficer = {
-    name:name,
-    rank:rank
-  };
+error.textContent =
+"Enter your name and rank.";
 
+return;
 
-  /*
-  If Supabase is connected,
-  save the officer online.
-  */
-
- if(supabaseClient){
-
-  const { data, error:dbError } =
-    await supabaseClient
-    .from("officers")
-    .upsert({
-      name:name,
-      rank:rank,
-      on_shift:true,
-      last_seen:new Date().toISOString()
-    }, {
-      onConflict:"name"
-    })
-    .select();
-
-  if(dbError){
-
-    console.error("SUPABASE ERROR:", dbError);
-
-    error.textContent =
-      "Database error: " + dbError.message;
-
-    return;
-  }
-
-  console.log("Officer saved:", data);
 }
 
-    }
 
-  }else{
+/*
+Use the officer's name as their
+unique identifier.
+*/
 
-    /*
-    Temporary same-browser fallback.
-    */
-
-    let localOfficers =
-      JSON.parse(
-        localStorage.getItem(
-          "valley_officers"
-        ) || "[]"
-      );
-
-    localOfficers =
-      localOfficers.filter(
-        officer =>
-          officer.name.toLowerCase()
-          !== name.toLowerCase()
-      );
-
-    localOfficers.push({
-      name:name,
-      rank:rank,
-      on_shift:true
-    });
-
-    localStorage.setItem(
-      "valley_officers",
-      JSON.stringify(localOfficers)
-    );
-
-  }
+const { data, error:dbError } =
+await supabaseClient
+.from("officers")
+.upsert(
+{
+name:name,
+rank:rank,
+on_shift:true,
+last_seen:new Date().toISOString()
+},
+{
+onConflict:"name"
+}
+)
+.select();
 
 
-  showDispatch();
+if(dbError){
+
+console.error(dbError);
+
+error.textContent =
+"Database error: " +
+dbError.message;
+
+return;
+
+}
+
+
+console.log(
+"Officer successfully added:",
+data
+);
+
+
+currentOfficer = {
+name:name,
+rank:rank
+};
+
+
+showDispatch();
 
 });
 
 
 /* =========================
-   SHOW DISPATCH
+SHOW APP
 ========================= */
 
 function showDispatch(){
 
-  document
-  .getElementById("loginPage")
-  .style.display="none";
+document
+.getElementById("loginPage")
+.style.display="none";
 
-  document
-  .getElementById("dispatchApp")
-  .style.display="block";
+document
+.getElementById("dispatchApp")
+.style.display="block";
 
-  document
-  .getElementById("currentUser")
-  .textContent =
-    currentOfficer.name +
-    " • " +
-    currentOfficer.rank;
+document
+.getElementById("currentUser")
+.textContent =
+currentOfficer.name +
+" • " +
+currentOfficer.rank;
 
-  loadAll();
-
-  clearInterval(officerRefreshTimer);
-  clearInterval(incidentRefreshTimer);
-  clearInterval(messageRefreshTimer);
-
-  /*
-  Refresh the officer list every 5 seconds.
-  */
-
-  officerRefreshTimer =
-    setInterval(
-      loadOfficers,
-      5000
-    );
-
-  /*
-  Refresh incidents every 5 seconds.
-  */
-
-  incidentRefreshTimer =
-    setInterval(
-      loadIncidents,
-      5000
-    );
-
-  /*
-  Refresh chat every 3 seconds.
-  */
-
-  messageRefreshTimer =
-    setInterval(
-      loadMessages,
-      3000
-    );
+loadOfficers();
+loadIncidents();
+loadMessages();
 
 }
 
 
 /* =========================
-   GO OFF DUTY
-========================= */
-
-document
-.getElementById("logoutBtn")
-.addEventListener("click",async function(){
-
-  if(!currentOfficer) return;
-
-  if(supabaseClient){
-
-    await supabaseClient
-      .from("officers")
-      .update({
-        on_shift:false,
-        last_seen:new Date().toISOString()
-      })
-      .eq(
-        "name",
-        currentOfficer.name
-      );
-
-  }else{
-
-    let localOfficers =
-      JSON.parse(
-        localStorage.getItem(
-          "valley_officers"
-        ) || "[]"
-      );
-
-    localOfficers =
-      localOfficers.filter(
-        officer =>
-          officer.name.toLowerCase()
-          !== currentOfficer.name.toLowerCase()
-      );
-
-    localStorage.setItem(
-      "valley_officers",
-      JSON.stringify(localOfficers)
-    );
-
-  }
-
-  clearInterval(officerRefreshTimer);
-  clearInterval(incidentRefreshTimer);
-  clearInterval(messageRefreshTimer);
-
-  currentOfficer = null;
-
-  document
-  .getElementById("dispatchApp")
-  .style.display="none";
-
-  document
-  .getElementById("loginPage")
-  .style.display="flex";
-
-  document
-  .getElementById("loginForm")
-  .reset();
-
-});
-
-
-/* =========================
-   NAVIGATION
-========================= */
-
-document
-.querySelectorAll(".nav-btn")
-.forEach(button => {
-
-  button.addEventListener(
-    "click",
-    function(){
-
-      document
-      .querySelectorAll(".nav-btn")
-      .forEach(btn =>
-        btn.classList.remove("active")
-      );
-
-      document
-      .querySelectorAll(".panel")
-      .forEach(panel =>
-        panel.classList.remove("active")
-      );
-
-      this.classList.add("active");
-
-      document
-      .getElementById(
-        "panel-" +
-        this.dataset.panel
-      )
-      .classList.add("active");
-
-    }
-
-  );
-
-});
-
-
-/* =========================
-   LOAD ALL
-========================= */
-
-function loadAll(){
-
-  loadOfficers();
-  loadIncidents();
-  loadMessages();
-
-}
-
-
-/* =========================
-   OFFICERS
+OFFICERS
 ========================= */
 
 async function loadOfficers(){
 
-  let officers = [];
+const { data, error } =
+await supabaseClient
+.from("officers")
+.select("*")
+.eq("on_shift",true)
+.order("name");
 
-  if(supabaseClient){
+if(error){
 
-    const {data,error} =
-      await supabaseClient
-      .from("officers")
-      .select("*")
-      .eq("on_shift",true)
-      .order(
-        "name",
-        {ascending:true}
-      );
+console.error(error);
 
-    if(error){
-
-      console.error(error);
-      return;
-
-    }
-
-    officers = data || [];
-
-  }else{
-
-    officers =
-      JSON.parse(
-        localStorage.getItem(
-          "valley_officers"
-        ) || "[]"
-      )
-      .filter(
-        officer =>
-          officer.on_shift !== false
-      );
-
-  }
-
-
-  document
-  .getElementById("totalOfficers")
-  .textContent =
-    officers.length;
-
-
-  const html =
-    officers.length
-    ? officers.map(createOfficerHTML).join("")
-    : '<div class="empty">No officers on shift.</div>';
-
-
-  document
-  .getElementById("officerList")
-  .innerHTML =
-    html;
-
-
-  document
-  .getElementById("dashboardOfficers")
-  .innerHTML =
-    html;
+return;
 
 }
 
+const officers =
+data || [];
 
-function createOfficerHTML(officer){
 
-  return `
+document
+.getElementById("totalOfficers")
+.textContent =
+officers.length;
 
-  <div class="officer">
 
-    <div class="officer-left">
+const html =
+officers.length
+?
+officers.map(officer => `
 
-      <span class="dot"></span>
+<div class="officer">
 
-      <div>
+<div class="officer-left">
 
-        <div class="officer-name">
-          ${escapeHTML(officer.name)}
-        </div>
+<span class="dot"></span>
 
-        <div class="officer-rank">
-          ${escapeHTML(officer.rank)}
-        </div>
+<div>
 
-      </div>
+<div class="officer-name">
+${escapeHTML(officer.name)}
+</div>
 
-    </div>
+<div class="officer-rank">
+${escapeHTML(officer.rank)}
+</div>
 
-    <span class="on-duty">
-      ON SHIFT
-    </span>
+</div>
 
-  </div>
+</div>
 
-  `;
+<span class="on-duty">
+ON SHIFT
+</span>
+
+</div>
+
+`).join("")
+
+:
+
+`<div class="empty">
+No officers on shift.
+</div>`;
+
+
+document
+.getElementById("officerList")
+.innerHTML =
+html;
+
+document
+.getElementById("dashboardOfficers")
+.innerHTML =
+html;
 
 }
 
 
 /* =========================
-   INCIDENTS
+OFF DUTY
+========================= */
+
+document
+.getElementById("logoutBtn")
+.addEventListener("click", async function(){
+
+if(!currentOfficer)
+return;
+
+
+const { error } =
+await supabaseClient
+.from("officers")
+.update({
+on_shift:false,
+last_seen:new Date().toISOString()
+})
+.eq(
+"name",
+currentOfficer.name
+);
+
+
+if(error){
+
+alert(
+"Could not go off duty: " +
+error.message
+);
+
+return;
+
+}
+
+
+currentOfficer = null;
+
+document
+.getElementById("dispatchApp")
+.style.display="none";
+
+document
+.getElementById("loginPage")
+.style.display="flex";
+
+document
+.getElementById("loginForm")
+.reset();
+
+});
+
+
+/* =========================
+INCIDENTS
 ========================= */
 
 document
 .getElementById("incidentForm")
-.addEventListener("submit",async function(event){
+.addEventListener("submit", async function(event){
 
-  event.preventDefault();
-
-  if(!currentOfficer) return;
-
-  const incident = {
-
-    type:
-      document
-      .getElementById("incidentType")
-      .value,
-
-    priority:
-      document
-      .getElementById("incidentPriority")
-      .value,
-
-    location:
-      document
-      .getElementById("incidentLocation")
-      .value
-      .trim(),
-
-    unit:
-      document
-      .getElementById("incidentUnit")
-      .value
-      .trim(),
-
-    description:
-      document
-      .getElementById("incidentDescription")
-      .value
-      .trim(),
-
-    officer:
-      currentOfficer.name,
-
-    created_at:
-      new Date().toISOString()
-
-  };
+event.preventDefault();
 
 
-  if(supabaseClient){
+const incident = {
 
-    const {error} =
-      await supabaseClient
-      .from("incidents")
-      .insert(incident);
+type:
+document
+.getElementById("incidentType")
+.value,
 
-    if(error){
+priority:
+document
+.getElementById("incidentPriority")
+.value,
 
-      console.error(error);
+location:
+document
+.getElementById("incidentLocation")
+.value
+.trim(),
 
-      alert(
-        "Could not save the incident."
-      );
+unit:
+document
+.getElementById("incidentUnit")
+.value
+.trim(),
 
-      return;
+description:
+document
+.getElementById("incidentDescription")
+.value
+.trim(),
 
-    }
+officer:
+currentOfficer.name,
 
-  }else{
+created_at:
+new Date().toISOString()
 
-    let incidents =
-      JSON.parse(
-        localStorage.getItem(
-          "valley_incidents"
-        ) || "[]"
-      );
-
-    incidents.unshift(incident);
-
-    localStorage.setItem(
-      "valley_incidents",
-      JSON.stringify(incidents)
-    );
-
-  }
+};
 
 
-  document
-  .getElementById("incidentForm")
-  .reset();
+const { error } =
+await supabaseClient
+.from("incidents")
+.insert(incident);
 
-  loadIncidents();
+
+if(error){
+
+alert(
+"Incident error: " +
+error.message
+);
+
+return;
+
+}
+
+
+document
+.getElementById("incidentForm")
+.reset();
+
+loadIncidents();
 
 });
 
 
 async function loadIncidents(){
 
-  let incidents = [];
-
-  if(supabaseClient){
-
-    const {data,error} =
-      await supabaseClient
-      .from("incidents")
-      .select("*")
-      .order(
-        "created_at",
-        {ascending:false}
-      )
-      .limit(50);
-
-    if(error){
-
-      console.error(error);
-      return;
-
-    }
-
-    incidents = data || [];
-
-  }else{
-
-    incidents =
-      JSON.parse(
-        localStorage.getItem(
-          "valley_incidents"
-        ) || "[]"
-      );
-
-  }
+const { data, error } =
+await supabaseClient
+.from("incidents")
+.select("*")
+.order(
+"created_at",
+{ascending:false}
+)
+.limit(50);
 
 
-  document
-  .getElementById("totalIncidents")
-  .textContent =
-    incidents.length;
+if(error){
 
+console.error(error);
 
-  const html =
-    incidents.length
-    ? incidents.map(createIncidentHTML).join("")
-    : '<div class="empty">No incidents logged.</div>';
-
-
-  document
-  .getElementById("incidentList")
-  .innerHTML =
-    html;
-
-
-  document
-  .getElementById("dashboardIncidents")
-  .innerHTML =
-    incidents
-    .slice(0,5)
-    .map(createIncidentHTML)
-    .join("")
-    ||
-    '<div class="empty">No incidents logged.</div>';
+return;
 
 }
 
 
-function createIncidentHTML(incident){
+const incidents =
+data || [];
 
-  const time =
-    incident.created_at
-    ? new Date(
-        incident.created_at
-      ).toLocaleString()
-    : "";
 
-  return `
+document
+.getElementById("totalIncidents")
+.textContent =
+incidents.length;
 
-  <div class="incident">
 
-    <div class="incident-header">
+const html =
+incidents.length
+?
+incidents.map(incident => `
 
-      <span class="incident-type">
-        🚨 ${escapeHTML(incident.type)}
-        • ${escapeHTML(incident.priority)}
-      </span>
+<div class="incident">
 
-      <span class="incident-time">
-        ${escapeHTML(time)}
-      </span>
+<div class="incident-header">
 
-    </div>
+<span class="incident-type">
+🚨 ${escapeHTML(incident.type)}
+•
+${escapeHTML(incident.priority)}
+</span>
 
-    <div class="incident-location">
-      📍 ${escapeHTML(incident.location)}
-    </div>
+<span class="incident-time">
+${escapeHTML(
+new Date(
+incident.created_at
+).toLocaleString()
+)}
+</span>
 
-    <div class="incident-description">
+</div>
 
-      ${escapeHTML(incident.description)}
+<div class="incident-location">
+📍 ${escapeHTML(incident.location)}
+</div>
 
-      <br><br>
+<div class="incident-description">
 
-      <span>
-        Unit:
-        ${escapeHTML(
-          incident.unit || "Not assigned"
-        )}
+${escapeHTML(
+incident.description
+)}
 
-        • Logged by:
-        ${escapeHTML(incident.officer)}
-      </span>
+<br><br>
 
-    </div>
+Unit:
+${escapeHTML(
+incident.unit || "Not assigned"
+)}
 
-  </div>
+•
 
-  `;
+Logged by:
+${escapeHTML(
+incident.officer
+)}
+
+</div>
+
+</div>
+
+`).join("")
+
+:
+
+`<div class="empty">
+No incidents logged.
+</div>`;
+
+
+document
+.getElementById("incidentList")
+.innerHTML =
+html;
+
+
+document
+.getElementById("dashboardIncidents")
+.innerHTML =
+incidents
+.slice(0,5)
+.map(incident => `
+
+<div class="incident">
+
+<div class="incident-header">
+
+<span class="incident-type">
+🚨 ${escapeHTML(incident.type)}
+</span>
+
+<span class="incident-time">
+${escapeHTML(
+new Date(
+incident.created_at
+).toLocaleString()
+)}
+</span>
+
+</div>
+
+<div class="incident-location">
+📍 ${escapeHTML(incident.location)}
+</div>
+
+</div>
+
+`)
+.join("")
+||
+
+`<div class="empty">
+No incidents logged.
+</div>`;
 
 }
 
 
 /* =========================
-   CHAT
+CHAT
 ========================= */
 
 document
 .getElementById("chatForm")
-.addEventListener("submit",async function(event){
+.addEventListener("submit", async function(event){
 
-  event.preventDefault();
-
-  if(!currentOfficer) return;
-
-  const input =
-    document.getElementById("chatInput");
-
-  const text =
-    input.value.trim();
-
-  if(!text) return;
+event.preventDefault();
 
 
-  const message = {
-
-    name:
-      currentOfficer.name,
-
-    rank:
-      currentOfficer.rank,
-
-    text:text,
-
-    created_at:
-      new Date().toISOString()
-
-  };
+const text =
+document
+.getElementById("chatInput")
+.value
+.trim();
 
 
-  if(supabaseClient){
-
-    const {error} =
-      await supabaseClient
-      .from("messages")
-      .insert(message);
-
-    if(error){
-
-      console.error(error);
-
-      alert(
-        "Could not send message."
-      );
-
-      return;
-
-    }
-
-  }else{
-
-    let messages =
-      JSON.parse(
-        localStorage.getItem(
-          "valley_messages"
-        ) || "[]"
-      );
-
-    messages.push(message);
-
-    localStorage.setItem(
-      "valley_messages",
-      JSON.stringify(messages)
-    );
-
-  }
+if(!text)
+return;
 
 
-  input.value="";
+const { error } =
+await supabaseClient
+.from("messages")
+.insert({
 
-  loadMessages();
+name:
+currentOfficer.name,
+
+rank:
+currentOfficer.rank,
+
+text:text,
+
+created_at:
+new Date().toISOString()
+
+});
+
+
+if(error){
+
+alert(
+"Chat error: " +
+error.message
+);
+
+return;
+
+}
+
+
+document
+.getElementById("chatInput")
+.value="";
+
+loadMessages();
 
 });
 
 
 async function loadMessages(){
 
-  let messages = [];
-
-  if(supabaseClient){
-
-    const {data,error} =
-      await supabaseClient
-      .from("messages")
-      .select("*")
-      .order(
-        "created_at",
-        {ascending:true}
-      )
-      .limit(100);
-
-    if(error){
-
-      console.error(error);
-      return;
-
-    }
-
-    messages = data || [];
-
-  }else{
-
-    messages =
-      JSON.parse(
-        localStorage.getItem(
-          "valley_messages"
-        ) || "[]"
-      );
-
-  }
+const { data, error } =
+await supabaseClient
+.from("messages")
+.select("*")
+.order(
+"created_at",
+{ascending:true}
+)
+.limit(100);
 
 
-  const container =
-    document.getElementById("messages");
+if(error){
+
+console.error(error);
+
+return;
+
+}
 
 
-  if(!messages.length){
-
-    container.innerHTML =
-      '<div class="empty">No messages yet.</div>';
-
-    return;
-
-  }
+const messages =
+data || [];
 
 
-  container.innerHTML =
-    messages.map(message => {
-
-      const time =
-        message.created_at
-        ? new Date(
-            message.created_at
-          ).toLocaleTimeString()
-        : "";
-
-      return `
-
-      <div class="message">
-
-        <span class="message-author">
-          ${escapeHTML(message.name)}
-          •
-          ${escapeHTML(message.rank)}
-        </span>
-
-        <span class="message-time">
-          ${escapeHTML(time)}
-        </span>
-
-        <div class="message-text">
-          ${escapeHTML(message.text)}
-        </div>
-
-      </div>
-
-      `;
-
-    }).join("");
+const container =
+document.getElementById("messages");
 
 
-  container.scrollTop =
-    container.scrollHeight;
+if(!messages.length){
+
+container.innerHTML =
+`<div class="empty">
+No messages yet.
+</div>`;
+
+return;
+
+}
+
+
+container.innerHTML =
+messages
+.map(message => `
+
+<div class="message">
+
+<span class="message-author">
+
+${escapeHTML(message.name)}
+•
+${escapeHTML(message.rank)}
+
+</span>
+
+<span class="message-time">
+
+${escapeHTML(
+new Date(
+message.created_at
+).toLocaleTimeString()
+)}
+
+</span>
+
+<div class="message-text">
+
+${escapeHTML(message.text)}
+
+</div>
+
+</div>
+
+`)
+.join("");
+
+
+container.scrollTop =
+container.scrollHeight;
 
 }
 
 
 /* =========================
-   SECURITY
+AUTO REFRESH
 ========================= */
 
-function escapeHTML(value){
+setInterval(
+loadOfficers,
+5000
+);
 
-  return String(value ?? "")
-  .replace(/&/g,"&amp;")
-  .replace(/</g,"&lt;")
-  .replace(/>/g,"&gt;")
-  .replace(/"/g,"&quot;")
-  .replace(/'/g,"&#039;");
+setInterval(
+loadIncidents,
+5000
+);
 
-}
+setInterval(
+loadMessages,
+3000
+);
 
 
 /* =========================
-   HEARTBEAT
+HEARTBEAT
 ========================= */
 
 setInterval(async function(){
 
-  if(!currentOfficer || !supabaseClient)
-    return;
+if(!currentOfficer)
+return;
 
-  await supabaseClient
-    .from("officers")
-    .update({
-      last_seen:new Date().toISOString(),
-      on_shift:true
-    })
-    .eq(
-      "name",
-      currentOfficer.name
-    );
+await supabaseClient
+.from("officers")
+.update({
+last_seen:
+new Date().toISOString()
+})
+.eq(
+"name",
+currentOfficer.name
+);
 
 },10000);
+
+
+/* =========================
+NAVIGATION
+========================= */
+
+document
+.querySelectorAll(".nav-btn")
+.forEach(button => {
+
+button.addEventListener(
+"click",
+function(){
+
+document
+.querySelectorAll(".nav-btn")
+.forEach(btn =>
+btn.classList.remove("active")
+);
+
+document
+.querySelectorAll(".panel")
+.forEach(panel =>
+panel.classList.remove("active")
+);
+
+this.classList.add("active");
+
+document
+.getElementById(
+"panel-" +
+this.dataset.panel
+)
+.classList.add("active");
+
+});
+
+});
+
+
+/* =========================
+SECURITY
+========================= */
+
+function escapeHTML(value){
+
+return String(value ?? "")
+.replace(/&/g,"&amp;")
+.replace(/</g,"&lt;")
+.replace(/>/g,"&gt;")
+.replace(/"/g,"&quot;")
+.replace(/'/g,"&#039;");
+
+}
 
 </script>
 
