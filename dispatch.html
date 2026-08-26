@@ -1113,31 +1113,33 @@ document
   save the officer online.
   */
 
-  if(supabaseClient){
+ if(supabaseClient){
 
-    const { error:dbError } =
-      await supabaseClient
-      .from("officers")
-      .upsert(
-        {
-          name:name,
-          rank:rank,
-          on_shift:true,
-          last_seen:new Date().toISOString()
-        },
-        {
-          onConflict:"name"
-        }
-      );
+  const { data, error:dbError } =
+    await supabaseClient
+    .from("officers")
+    .upsert({
+      name:name,
+      rank:rank,
+      on_shift:true,
+      last_seen:new Date().toISOString()
+    }, {
+      onConflict:"name"
+    })
+    .select();
 
-    if(dbError){
+  if(dbError){
 
-      console.error(dbError);
+    console.error("SUPABASE ERROR:", dbError);
 
-      error.textContent =
-        "Could not connect to the dispatch database.";
+    error.textContent =
+      "Database error: " + dbError.message;
 
-      return;
+    return;
+  }
+
+  console.log("Officer saved:", data);
+}
 
     }
 
